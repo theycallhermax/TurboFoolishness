@@ -12,20 +12,27 @@ class turboFoolishness {
         {
           opcode: 'version',
           blockType: Scratch.BlockType.REPORTER,
-          text: 'TurboFoolishness Version',
+          text: 'version',
         }, 	{
           opcode: 'author',
           blockType: Scratch.BlockType.REPORTER,
-          text: 'TurboFoolishness Author',
+          text: 'author',
+        },  {
+          opcode: 'supportededitors',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'supported editors',
         },
       ]
     };
   }
 version() {
-    return '1.0';
+    return vers;
   };
 author() {
     return 'M.D. Walters';
+  };
+supportededitors() {
+    return 'TurboWarp, E羊icques, and Adacraft';
   };
 }
 Scratch.extensions.register(new turboFoolishness());
