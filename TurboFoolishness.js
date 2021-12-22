@@ -4,7 +4,7 @@ class turboFoolishness {
     return {
       id: 'turbofoolishness',
       name: 'TurboFoolishness',
-
+      menuIconURI: cl_icon,
       blocks: [
         {
           opcode: 'version',
