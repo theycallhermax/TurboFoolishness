@@ -1,4 +1,4 @@
-const cl_icon = 'img/ext-img.svg';
+const cl_icon = 'https://mwalters75.github.io/TurboFoolishness/img/ext-img.svg';
 class turboFoolishness {
   getInfo() {
     return {
