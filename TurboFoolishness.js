@@ -22,6 +22,10 @@ class turboFoolishness {
           opcode: 'supportededitors',
           blockType: Scratch.BlockType.REPORTER,
           text: 'supported editors',
+        },  {
+          opcode: 'rickroll',
+          blockType: Scratch.BlockType.COMMAND,
+          text: '(beta) rickroll me',
         },
       ]
     };
@@ -34,6 +38,9 @@ author() {
   };
 supportededitors() {
     return 'TurboWarp E羊icques';
+  };
+rickroll() {
+    return 'Never gonna give you up, never gonna let you down, never gonna leave you in the dust and dessert you';
   };
 }
 Scratch.extensions.register(new turboFoolishness());
