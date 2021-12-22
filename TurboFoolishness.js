@@ -17,11 +17,11 @@ class turboFoolishness {
           opcode: 'author',
           blockType: Scratch.BlockType.REPORTER,
           text: 'TurboFoolishness Author',
-        }, 	{
+        },
       ]
     };
   }
-  version() {
+version() {
     return '1.0';
   };
 author() {
