@@ -23,16 +23,10 @@ class turboFoolishness {
           blockType: Scratch.BlockType.REPORTER,
           text: 'supported editors',
         },  {
-          opcode: 'echo',
+          opcode: 'sing',
           blockType: Scratch.BlockType.REPORTER,
-          text: 'echo [data]',
-          arguments: {
-            data: {
-							type: Scratch.ArgumentType.STRING,
-							defaultValue: 'dot'
-						}
-          }
-        },  // {
+          text: 'sing',
+        },
       ]
     };
   }
@@ -45,8 +39,8 @@ author() {
 supportededitors() {
     return 'TurboWarp E羊icques';
   };
-echo() {
-    return data;
+sing() {
+    return 'La, la, la!';
   };
 }
 Scratch.extensions.register(new turboFoolishness());
