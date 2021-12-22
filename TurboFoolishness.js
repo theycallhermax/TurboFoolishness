@@ -1,3 +1,4 @@
+const cl_icon = 'img/ext-img.svg';
 class turboFoolishness {
   getInfo() {
     return {
