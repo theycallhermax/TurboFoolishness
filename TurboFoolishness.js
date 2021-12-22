@@ -33,7 +33,7 @@ author() {
     return auth;
   };
 supportededitors() {
-    return 'TurboWarp E羊icques Adacraft';
+    return 'TurboWarp E羊icques';
   };
 }
 Scratch.extensions.register(new turboFoolishness());
