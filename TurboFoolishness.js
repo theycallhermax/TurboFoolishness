@@ -35,6 +35,7 @@ class turboFoolishness {
         },  {
           opcode: 'eat',
           blockType: Scratch.BlockType.REPORTER,
+          text: 'eat'
         }
       ]
     };
@@ -53,6 +54,9 @@ sing() {
   };
 releaseNotes() {
     return 'The ' + release_number + 'release of ' + ext_name + '!';
+  };
+eat() {
+    return 'Num, num, crunch, crunch, chew, chew';
   };
 }
 Scratch.extensions.register(new turboFoolishness());
