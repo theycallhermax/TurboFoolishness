@@ -40,7 +40,11 @@ class turboFoolishness {
           opcode: 'dummy-hat',
           blockType: Scratch.BlockType.HAT,
           text: 'dummy hat',
-        },
+        },  {
+          opcode: 'dummy-block',
+          blockType: Scratch.BlockType.COMMAND,
+          text: 'dummy block',
+        }
       ]
     };
   }
