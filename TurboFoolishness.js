@@ -11,6 +11,7 @@ class turboFoolishness {
       name: 'TurboFoolishness',
       menuIconURI: tf_icon,
       blockIconURI: tf_block,
+      docsURI: 'https://github.com/Mwalters75/TurboFoolishness#the-making-of-turbofoolishnessdocumentation',
       blocks: [
         {
           opcode: 'version',
