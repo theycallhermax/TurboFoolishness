@@ -1,6 +1,7 @@
 const version = '1.0';
 const author = 'M.D. Walters';
 const ext_name = 'TurboFoolishness';
+const release_number = 'first';
 const cl_icon = 'https://mwalters75.github.io/TurboFoolishness/img/extension.svg';
 const cl_block = 'https://mwalters75.github.io/TurboFoolishness/img/block.svg';
 class turboFoolishness {
@@ -48,7 +49,7 @@ sing() {
     return 'La, la, la!';
   };
 releaseNotes() {
-    return 'The very first release of ' + ext_name + '!';
+    return 'The ' + release_number + 'release of ' + ext_name + '!';
   };
 }
 Scratch.extensions.register(new turboFoolishness());
