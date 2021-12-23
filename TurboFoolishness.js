@@ -37,9 +37,9 @@ class turboFoolishness {
           blockType: Scratch.BlockType.REPORTER,
           text: 'eat'
         },  {
-          opcode: 'example-hat',
+          opcode: 'dummy-hat',
           blockType: Scratch.BlockType.HAT,
-          text: 'code that was decided to be removed',
+          text: 'dummy hat',
         },
       ]
     };
