@@ -51,7 +51,17 @@ class turboFoolishness {
           opcode: 'dummyboolean',
           blockType: Scratch.BlockType.BOOLEAN,
           text: 'dummy boolean'
-        }
+        },  {
+          opcode: 'dummy-conditional',
+          blockType: Scratch.BlockType.CONDITIONAL,
+          text: 'dummy conditional',
+          branchCount: 1,
+        },  {
+          opcode: 'dummy-cap',
+          blockType: Scratch.BlockType.COMMAND,
+          text: 'dummy cap',
+          terminal: true,
+        },
       ]
     };
   }
