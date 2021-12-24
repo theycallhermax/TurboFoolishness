@@ -9,7 +9,7 @@ class turboFoolishness {
     return {
       id: 'turbofoolishness',
       name: 'TurboFoolishness',
-      // menuIconURI: 'https://mwalters75.github.io/TurboFoolishness/img/extension.svg',
+      menuIconURI: 'https://mwalters75.github.io/TurboFoolishness/img/extension.svg',
       blockIconURI: 'https://mwalters75.github.io/TurboFoolishness/img/block.svg',
       docsURI: 'https://github.com/Mwalters75/TurboFoolishness#the-making-of-turbofoolishnessdocumentation',
       color1: '#9500ff',
@@ -52,16 +52,15 @@ class turboFoolishness {
           blockType: Scratch.BlockType.BOOLEAN,
           text: 'dummy boolean'
         },  {
-          opcode: 'dummy-conditional',
+          opcode: 'dummy-conditional-one',
           blockType: Scratch.BlockType.CONDITIONAL,
-          text: 'dummy conditional',
+          text: 'dummy conditional with one branch',
           branchCount: 1,
         },  {
-          opcode: 'dummy-conditional-with-cap',
+          opcode: 'dummy-conditional-two',
           blockType: Scratch.BlockType.CONDITIONAL,
-          text: 'dummy conditional with cap',
-          branchCount: 1,
-          terminal: true,
+          text: 'dummy conditional with two branches',
+          branchCount: 2,
         },
       ]
     };
