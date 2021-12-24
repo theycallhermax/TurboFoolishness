@@ -61,7 +61,12 @@ class turboFoolishness {
           blockType: Scratch.BlockType.CONDITIONAL,
           text: 'dummy conditional with two branches',
           branchCount: 2,
-        },
+        },  {
+          opcode: 'dummy-conditional-three',
+          blockType: Scratch.BlockType.CONDITIONAL,
+          text: 'dummy conditional with three branches',
+          branchCount: 3,
+        }
       ]
     };
   }
