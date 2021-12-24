@@ -58,8 +58,9 @@ class turboFoolishness {
           branchCount: 1,
         },  {
           opcode: 'dummy-cap',
-          blockType: Scratch.BlockType.COMMAND,
+          blockType: Scratch.BlockType.CONDITIONAL,
           text: 'dummy cap',
+          branchCount: 0,
           terminal: true,
         },
       ]
