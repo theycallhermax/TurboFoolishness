@@ -9,9 +9,10 @@ class turboFoolishness {
     return {
       id: 'turbofoolishness',
       name: 'TurboFoolishness',
-      menuIconURI: tf_icon,
-      blockIconURI: tf_block,
+      menuIconURI: 'https://mwalters75.github.io/TurboFoolishness/img/extension.svg',
+      blockIconURI: 'https://mwalters75.github.io/TurboFoolishness/img/block.svg',
       docsURI: 'https://github.com/Mwalters75/TurboFoolishness#the-making-of-turbofoolishnessdocumentation',
+      color1: '#ffa959',
       blocks: [
         {
           opcode: 'version',
@@ -45,6 +46,14 @@ class turboFoolishness {
           opcode: 'dummy-block',
           blockType: Scratch.BlockType.COMMAND,
           text: 'dummy block',
+        },  {
+          opcode: 'dummyreporter',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'dummy reporter',
+        },  {
+          opcode: 'dummyboolean',
+          blockType: Scratch.BlockType.BOOLEAN,
+          text: 'dummy boolean'
         }
       ]
     };
@@ -66,6 +75,12 @@ releaseNotes() {
   };
 eat() {
     return 'Num, num, crunch, crunch, chew, chew';
+  };
+dummyreporter() {
+    return '';
+  };
+dummyboolean() {
+    return '';
   };
 }
 Scratch.extensions.register(new turboFoolishness());
