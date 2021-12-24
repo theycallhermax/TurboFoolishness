@@ -57,10 +57,10 @@ class turboFoolishness {
           text: 'dummy conditional',
           branchCount: 1,
         },  {
-          opcode: 'dummy-cap',
+          opcode: 'dummy-conditional-with-cap',
           blockType: Scratch.BlockType.CONDITIONAL,
-          text: 'dummy cap',
-          branchCount: 0,
+          text: 'dummy conditional with cap',
+          branchCount: 1,
           terminal: true,
         },
       ]
