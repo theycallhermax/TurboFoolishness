@@ -12,7 +12,7 @@ class turboFoolishness {
       menuIconURI: 'https://mwalters75.github.io/TurboFoolishness/img/extension.svg',
       blockIconURI: 'https://mwalters75.github.io/TurboFoolishness/img/block.svg',
       docsURI: 'https://github.com/Mwalters75/TurboFoolishness#the-making-of-turbofoolishnessdocumentation',
-      color1: '#00fbff',
+      color1: '#9500ff',
       color2: '#000000',
       blocks: [
         {
