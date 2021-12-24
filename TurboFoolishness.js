@@ -24,10 +24,6 @@ class turboFoolishness {
           blockType: Scratch.BlockType.REPORTER,
           text: 'author',
         },  {
-          opcode: 'releaseNotes',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'release notes',
-        },  {
           opcode: 'supportededitors',
           blockType: Scratch.BlockType.REPORTER,
           text: 'supported editors',
@@ -70,9 +66,6 @@ supportededitors() {
   };
 sing() {
     return 'La, la, la!';
-  };
-releaseNotes() {
-    return 'The ' + release_number + 'release of ' + ext_name + '!';
   };
 eat() {
     return 'Num, num, crunch, crunch, chew, chew';
