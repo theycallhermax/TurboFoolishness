@@ -1,9 +1,5 @@
 const version = '1.0';
 const author = 'M.D. Walters';
-const ext_name = 'TurboFoolishness';
-const release_number = 'first';
-const tf_icon = 'https://mwalters75.github.io/TurboFoolishness/img/extension.svg';
-const tf_block = 'https://mwalters75.github.io/TurboFoolishness/img/block.svg';
 class turboFoolishness {
   getInfo() {
     return {
@@ -66,7 +62,17 @@ class turboFoolishness {
           blockType: Scratch.BlockType.CONDITIONAL,
           text: 'dummy conditional with three branches',
           branchCount: 3,
-        }
+        },  {
+          opcode: 'dummy-conditional-four',
+          blockType: Scratch.BlockType.CONDITIONAL,
+          text: 'dummy conditonal with four branches',
+          branchCount: 4,
+        },  {
+          opcode: 'dummy-conditional-five',
+          blockType: Scratch.BlockType.CONDITIONAL,
+          text: 'dummy conditional with five branches',
+          branchCount: 5,
+        },
       ]
     };
   }
