@@ -26,3 +26,8 @@ After reading *lots* of documentations, I figured out how to make another report
     text: 'author',
 },
 ```
+## To-Do List
+- [x] Make TurboFoolishness
+- [x] Make blocks, reporters, hats, etc
+- [ ] Learn how to write a proper Scratch extention
+- [ ] Add more things on this To-Do List
