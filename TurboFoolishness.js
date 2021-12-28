@@ -72,6 +72,16 @@ class turboFoolishness {
           blockType: Scratch.BlockType.CONDITIONAL,
           text: 'dummy conditional with five branches',
           branchCount: 5,
+        },  {
+          opcode: 'fetch',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'fetch [url]',
+          "arguments": {
+            "url": {
+              "type": "string",
+              "defaultValue": "https://mwalters75.github.io/TurboFoolishness/fetch"
+            }
+          }
         },
       ]
     };
@@ -96,6 +106,9 @@ dummyreporter() {
   };
 dummyboolean() {
     return '';
+  };
+fetchURL({url}) {
+    return fetch(url).then(response => response.text())
   };
 }
 Scratch.extensions.register(new turboFoolishness());
