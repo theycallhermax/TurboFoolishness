@@ -107,7 +107,7 @@ dummyreporter() {
 dummyboolean() {
     return '';
   };
-fetchURL({url}) {
+fetch({url}) {
     return fetch(url).then(response => response.text())
   };
 }
