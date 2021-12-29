@@ -79,7 +79,25 @@ class turboFoolishness {
           "arguments": {
             "url": {
               "type": "string",
-              "defaultValue": "https://mwalters75.github.io/TurboFoolishness/fetch"
+              "defaultValue": "https://mwalters75.github.io/TurboFoolishness/fetch",
+            }
+          }
+        },  {
+          opcode: 'equalto',
+          blockType: Scratch.BlockType.BOOLEAN,
+          text: '[firstnumber] + [secondnumber] = [answer]?',
+          "arguments": {
+            "firstnumber": {
+              "type": "string",
+              "defaultValue": "1",
+            },
+            "secondnumber": {
+              "type": "string",
+              "defaultValue": "1",
+            },
+            "answer": {
+              "type": "string",
+              "defaultValue": "1",
             }
           }
         },
@@ -109,6 +127,19 @@ dummyboolean() {
   };
 fetch({url}) {
     return fetch(url).then(response => response.text())
+  };
+equalto({firstnumber}) {
+    const firstnumber = firstnumber;
+  };
+equalto({secondnumber}) {
+    const secondnumber = secondnumber;
+  };
+equalto({answer}) {
+  if (firstnumber + secondnumber = answer) {
+    return 'true';
+  } else {
+    return 'false';
+  }
   };
 }
 Scratch.extensions.register(new turboFoolishness());
