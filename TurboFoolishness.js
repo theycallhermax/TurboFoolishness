@@ -84,20 +84,12 @@ class turboFoolishness {
           }
         },  {
           opcode: 'equalto',
-          blockType: Scratch.BlockType.BOOLEAN,
-          text: '[firstnumber] + [secondnumber] = [answer]?',
+          blockType: Scratch.BlockType.COMMAND,
+          text: 'comment: [comment]',
           "arguments": {
-            "firstnumber": {
+            "comment": {
               "type": "string",
-              "defaultValue": "1",
-            },
-            "secondnumber": {
-              "type": "string",
-              "defaultValue": "1",
-            },
-            "answer": {
-              "type": "string",
-              "defaultValue": "1",
+              "defaultValue": "",
             }
           }
         },
@@ -128,20 +120,5 @@ dummyboolean() {
 fetch({url}) {
     return fetch(url).then(response => response.text())
   };
-equalto({firstnumber}) {
-    const firstnumber = firstnumber;
-  };
-equalto({secondnumber}) {
-    const secondnumber = secondnumber;
-  };
-/*
-equalto({answer}) {
-  if (firstnumber + secondnumber = answer) {
-    return 'true';
-  } else {
-    return 'false';
-  }
-  };
-  */
 }
 Scratch.extensions.register(new turboFoolishness());
