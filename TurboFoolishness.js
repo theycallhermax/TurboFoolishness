@@ -134,6 +134,7 @@ equalto({firstnumber}) {
 equalto({secondnumber}) {
     const secondnumber = secondnumber;
   };
+/*
 equalto({answer}) {
   if (firstnumber + secondnumber = answer) {
     return 'true';
@@ -141,5 +142,6 @@ equalto({answer}) {
     return 'false';
   }
   };
+  */
 }
 Scratch.extensions.register(new turboFoolishness());
