@@ -99,7 +99,7 @@ class turboFoolishness {
           "arguments": {
             "data": {
               "type": "string",
-              "defaultValue": "Foo",
+              "defaultValue": "foo",
             }
           }
         }, {
@@ -138,7 +138,7 @@ transfer() {
     const transfer = transfer;
   };
 transferedcontent() {
-    return transfer;
+    return data;
   };
 }
 Scratch.extensions.register(new turboFoolishness());
