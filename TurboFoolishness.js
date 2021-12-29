@@ -92,6 +92,20 @@ class turboFoolishness {
               "defaultValue": "This is a comment",
             }
           }
+        },  {
+          opcode: 'transfer',
+          blockType: Scratch.BlockType.COMMAND,
+          text: 'transfer [data] to transfer reporter',
+          "arguments": {
+            "data": {
+              "type": "string",
+              "defaultValue": "Foo",
+            }
+          }
+        }, {
+          opcode: 'transferedcontent',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'transfered content',
         },
       ]
     };
@@ -119,6 +133,12 @@ dummyboolean() {
   };
 fetch({url}) {
     return fetch(url).then(response => response.text())
+  };
+transfer() {
+    const transfer = transfer;
+  };
+transferedcontent() {
+    return transfer;
   };
 }
 Scratch.extensions.register(new turboFoolishness());
