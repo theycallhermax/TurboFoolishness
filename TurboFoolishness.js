@@ -12,26 +12,6 @@ class turboFoolishness {
       color2: '#000000',
       blocks: [
         {
-          opcode: 'version',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'version',
-        }, 	{
-          opcode: 'author',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'author',
-        },  {
-          opcode: 'supportededitors',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'supported editors',
-        },  {
-          opcode: 'sing',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'sing',
-        },  {
-          opcode: 'eat',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'eat'
-        },  {
           opcode: 'fetch',
           blockType: Scratch.BlockType.REPORTER,
           text: 'fetch [url]',
