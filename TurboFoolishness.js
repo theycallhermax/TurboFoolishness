@@ -147,10 +147,9 @@ class turboFoolishness {
             }
           }
         },  {
-          opcode: 'while',
-          blockType: Scratch.BlockType.CONDITIONAL,
-          text: 'while [boolean]',
-          branchCount: 1,
+          opcode: 'equaltonothing',
+          blockType: Scratch.BlockType.BOOLEAN,
+          text: '[boolean] returns nothing?',
           "arguments": {
             "boolean": {
               "type": Scratch.ArgumentType.BOOLEAN,
@@ -199,6 +198,13 @@ equaltotrue(args) {
   };
 equaltofalse(args) {
     if (args.boolean == false) {
+      return 'true';
+    } else {
+      return 'false';
+    }
+  };
+equaltonothing(args) {
+    if (args.boolean == '') {
       return 'true';
     } else {
       return 'false';
