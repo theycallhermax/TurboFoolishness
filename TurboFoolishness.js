@@ -134,7 +134,7 @@ class turboFoolishness {
           text: '[boolean] returns true?',
           "arguments": {
             "boolean": {
-              "type": "boolean",
+              "type": Scratch.ArgumentType.BOOLEAN,
             }
           }
         }, {
@@ -143,7 +143,7 @@ class turboFoolishness {
           text: '[boolean] returns false?',
           "arguments": {
             "boolean": {
-              "type": "boolean",
+              "type": Scratch.ArgumentType.BOOLEAN,
             }
           }
         }
