@@ -134,11 +134,11 @@ dummyboolean() {
 fetch({url}) {
     return fetch(url).then(response => response.text())
   };
-transfer({transfer}) {
-    const transfer = transfer;
+transfer({data}) {
+    const transfer = data;
   };
 transferedcontent() {
-    return data;
+    return transfer;
   };
 }
 Scratch.extensions.register(new turboFoolishness());
