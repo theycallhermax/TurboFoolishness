@@ -133,12 +133,6 @@ sing() {
 eat() {
     return 'Num, num, crunch, crunch, chew, chew';
   };
-dummyreporter() {
-    return '';
-  };
-dummyboolean() {
-    return '';
-  };
 fetch({url}) {
     return fetch(url).then(response => response.text())
   };
