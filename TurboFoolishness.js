@@ -110,6 +110,20 @@ class turboFoolishness {
               "defaultValue": "pineapple",
             }
           }
+        }, {
+          opcode: 'transfer',
+          blockType: Scratch.BlockType.COMMAND,
+          text: 'transfer [text]',
+          "arguments": {
+            "text": {
+              "type": "string",
+              "defaultValue": "foo",
+            }
+          }
+        }, {
+          opcode: 'receiver',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'receiver',
         },
       ]
     };
@@ -140,6 +154,12 @@ fetch({url}) {
   };
 join(args) {
     return args.one + args.two + args.three;
+  };
+transfer(args) {
+    const transfer = args.text;
+  };
+reciever() {
+    return transfer;
   };
 }
 Scratch.extensions.register(new turboFoolishness());
