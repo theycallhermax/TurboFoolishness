@@ -112,7 +112,7 @@ class turboFoolishness {
           }
         }, {
           opcode: 'addition',
-          blockType: Scratch.BlockType.COMMAND,
+          blockType: Scratch.BlockType.REPORTER,
           text: '[one] + [two] + [three]',
           "arguments": {
             "one": {
