@@ -83,7 +83,7 @@ class turboFoolishness {
             }
           }
         },  {
-          opcode: 'equalto',
+          opcode: 'comment',
           blockType: Scratch.BlockType.COMMAND,
           text: 'comment: [comment]',
           "arguments": {
