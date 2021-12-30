@@ -92,6 +92,24 @@ class turboFoolishness {
               "defaultValue": "foo",
             }
           }
+        },  {
+          opcode: 'join',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'join [one][two][three]',
+          "arguments": {
+            "one": {
+              "type": "string",
+              "defaultValue": "apple ",
+            },
+            "two": {
+              "type": "string",
+              "defaultValue": "banana ",
+            },
+            "three": {
+              "type": "string",
+              "defaultValue": "pineapple",
+            }
+          }
         },
       ]
     };
@@ -119,6 +137,9 @@ dummyboolean() {
   };
 fetch({url}) {
     return fetch(url).then(response => response.text())
+  };
+join() {
+    return args.one + args.two + args.three;
   };
 }
 Scratch.extensions.register(new turboFoolishness());
