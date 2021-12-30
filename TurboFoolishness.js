@@ -89,10 +89,12 @@ class turboFoolishness {
           "arguments": {
             "comment": {
               "type": "string",
-              "defaultValue": "This is a comment",
+              "defaultValue": "foo",
             }
           }
-        },
+        },  {
+          opcode: '',
+        }
       ]
     };
   }
