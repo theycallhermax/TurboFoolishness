@@ -146,9 +146,19 @@ class turboFoolishness {
               "type": Scratch.ArgumentType.BOOLEAN,
             }
           }
-        }
+        },  {
+          opcode: 'while',
+          blockType: Scratch.BlockType.CONDITIONAL,
+          text: 'while [boolean]',
+          branchCount: 1,
+          "arguments": {
+            "boolean": {
+              "type": Scratch.ArgumentType.BOOLEAN,
+            }
+          }
+        },
       ]
-    };
+    }  
   }
 version() {
     return version;
