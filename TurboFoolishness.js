@@ -117,15 +117,15 @@ class turboFoolishness {
           "arguments": {
             "one": {
               "type": Scratch.ArgumentType.NUMBER,
-              "defaultValue": "",
+              "defaultValue": " ",
             },
             "two": {
               "type": Scratch.ArgumentType.NUMBER,
-              "defaultValue": "",
+              "defaultValue": " ",
             },
             "three": {
               "type": Scratch.ArgumentType.NUMBER,
-              "defaultValue": "",
+              "defaultValue": " ",
             }
           }
         }, {
