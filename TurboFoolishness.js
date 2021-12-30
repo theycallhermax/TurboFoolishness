@@ -94,6 +94,10 @@ class turboFoolishness {
               "type": Scratch.ArgumentType.BOOLEAN,
             }
           }
+        },  {
+          opcode: 'miliseconds',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'miliseconds',
         },
       ]
     }  
@@ -142,6 +146,11 @@ equaltonothing(args) {
     } else {
       return 'false';
     }
+  };
+miliseconds() {
+  const date = new Date();
+  let miliseconds = date.getMilliseconds();
+  return miliseconds;
   };
 }
 Scratch.extensions.register(new turboFoolishness());
