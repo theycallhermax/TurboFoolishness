@@ -138,7 +138,7 @@ dummyboolean() {
 fetch({url}) {
     return fetch(url).then(response => response.text())
   };
-join() {
+join(args) {
     return args.one + args.two + args.three;
   };
 }
