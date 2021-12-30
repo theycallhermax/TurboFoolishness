@@ -114,7 +114,7 @@ class turboFoolishness {
             }
           }
         },  {
-          opcode: 'findJSON',
+          opcode: 'jsonExtract',
           blockType: Scratch.BlockType.REPORTER,
           text: 'find [name] in [string]',
           "arguments": {
@@ -188,18 +188,20 @@ and(args) {
       return 'false';
     }
   };
-findJSON({name,string}){
-  if (name in parsed) {
-    var out = parsed[name]
-    var t = typeof(out)
-    if (t == "string" || t == "number")
-        return out
-    if (t == "boolean")
-        return t ? 1 : 0
-    return JSON.stringify(out)
-} else {
-    return ""
-}
-  };
+  jsonExtract({name,data}) {
+    var parsed = JSON.parse(data)
+    if (name in parsed) {
+        var out = parsed[name]
+        var t = typeof(out)
+        if (t == "string" || t == "number")
+            return out
+        if (t == "boolean")
+            return t ? 1 : 0
+        return JSON.stringify(out)
+    }
+    else {
+        return ""
+    }
+  }
 }
 Scratch.extensions.register(new turboFoolishness());
