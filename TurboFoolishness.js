@@ -111,19 +111,23 @@ class turboFoolishness {
             }
           }
         }, {
-          opcode: 'transfer',
+          opcode: 'addition',
           blockType: Scratch.BlockType.COMMAND,
-          text: 'transfer [text]',
+          text: '[one] + [two] + [three]',
           "arguments": {
-            "text": {
-              "type": "string",
-              "defaultValue": "foo",
+            "one": {
+              "type": Scratch.ArgumentType.NUMBER,
+              "defaultValue": "1",
+            },
+            "two": {
+              "type": Scratch.ArgumentType.NUMBER,
+              "defaultValue": "2",
+            },
+            "three": {
+              "type": Scratch.ArgumentType.NUMBER,
+              "defaultValue": "3",
             }
           }
-        }, {
-          opcode: 'receiver',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'receiver',
         },
       ]
     };
@@ -155,11 +159,8 @@ fetch({url}) {
 join(args) {
     return args.one + args.two + args.three;
   };
-transfer(args) {
-    const transfer = args.text;
-  };
-reciever() {
-    return transfer;
+addition(args) {
+    return (args.one + args.two + args.three);
   };
 }
 Scratch.extensions.register(new turboFoolishness());
