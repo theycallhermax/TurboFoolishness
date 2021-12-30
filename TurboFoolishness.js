@@ -128,10 +128,6 @@ class turboFoolishness {
               "defaultValue": " ",
             }
           }
-        }, {
-          opcode: 'test',
-          blockType: Scratch.BlockType.MATRIX,
-          text: 'matrix test'
         },
       ]
     };
