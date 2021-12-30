@@ -137,7 +137,16 @@ class turboFoolishness {
               "type": "boolean",
             }
           }
-        },
+        }, {
+          opcode: 'equaltofalse',
+          blockType: Scratch.BlockType.BOOLEAN,
+          text: '[boolean] returns false?',
+          "arguments": {
+            "boolean": {
+              "type": "boolean",
+            }
+          }
+        }
       ]
     };
   }
@@ -173,6 +182,13 @@ addition(args) {
   };
 equaltotrue(args) {
     if (args.boolean == true) {
+      return 'true';
+    } else {
+      return 'false';
+    }
+  };
+equaltofalse(args) {
+    if (args.boolean == false) {
       return 'true';
     } else {
       return 'false';
