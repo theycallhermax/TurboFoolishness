@@ -134,7 +134,7 @@ dummyboolean() {
 fetch({url}) {
     return fetch(url).then(response => response.text())
   };
-transfer() {
+transfer({transfer}) {
     const transfer = transfer;
   };
 transferedcontent() {
