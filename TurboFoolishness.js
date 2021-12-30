@@ -128,6 +128,15 @@ class turboFoolishness {
               "defaultValue": "3",
             }
           }
+        },  {
+          opcode: 'equaltotrue',
+          blockType: Scratch.BlockType.BOOLEAN,
+          text: '[boolean] returns true?',
+          "arguments": {
+            "boolean": {
+              "type": "boolean",
+            }
+          }
         },
       ]
     };
@@ -161,6 +170,14 @@ join(args) {
   };
 addition(args) {
     return (args.one + args.two + args.three);
+  };
+equaltotrue(args) {
+    if (args.boolean == true) {
+      return 'true';
+    }
+    if (args.boolean !== true) {
+      return 'false';
+    }
   };
 }
 Scratch.extensions.register(new turboFoolishness());
