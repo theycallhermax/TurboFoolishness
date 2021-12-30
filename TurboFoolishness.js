@@ -174,8 +174,7 @@ addition(args) {
 equaltotrue(args) {
     if (args.boolean == true) {
       return 'true';
-    }
-    if (args.boolean !== true) {
+    } else {
       return 'false';
     }
   };
