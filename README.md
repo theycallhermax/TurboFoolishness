@@ -7,7 +7,7 @@ A copy of this list is also avalible in the reporter "supported editors"
 - [E羊icques](https://sheeptester.github.io/scratch-gui/?url=https://mwalters75.github.io/TurboFoolishness/TurboFoolishness.js)
 ## The Making of TurboFoolishness/Documentation
 Well, making TurboFoolishness was very hard and lots, and lots of debugging. It's truly hard to make a "Scratch" extension. Firstly, the very first block was "version". It was originally called "TurboFoolishness Version". The code for it currently is this:
-```
+```js
 {
     opcode: 'version',
     blockType: Scratch.BlockType.REPORTER,
@@ -15,7 +15,7 @@ Well, making TurboFoolishness was very hard and lots, and lots of debugging. It'
 },
 ```
 After reading *lots* of documentations, I figured out how to make another reporter block with this code:
-```
+```js
 {
     opcode: 'version',
     blockType: Scratch.BlockType.REPORTER,
