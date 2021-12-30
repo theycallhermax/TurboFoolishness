@@ -188,7 +188,7 @@ and(args) {
       return 'false';
     }
   };
-findJSON(args){
+findJSON({name,string}){
   if (name in parsed) {
     var out = parsed[name]
     var t = typeof(out)
