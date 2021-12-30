@@ -98,6 +98,21 @@ class turboFoolishness {
           opcode: 'miliseconds',
           blockType: Scratch.BlockType.REPORTER,
           text: 'miliseconds',
+        },  {
+          opcode: 'and',
+          blockType: Scratch.BlockType.BOOLEAN,
+          text: '[one] or [two] or [three]',
+          "arguments": {
+            "one": {
+              "type": Scratch.ArgumentType.BOOLEAN,
+            },
+            "two": {
+              "type": Scratch.ArgumentType.BOOLEAN
+            },
+            "three": {
+              "type": Scratch.ArgumentType.BOOLEAN,
+            }
+          }
         },
       ]
     }  
@@ -151,6 +166,13 @@ miliseconds() {
   const date = new Date();
   let miliseconds = date.getMilliseconds();
   return miliseconds;
+  };
+and(args) {
+  if (args.one && args.two && args.three) {
+      return 'true';
+    } else {
+      return 'false';
+    }
   };
 }
 Scratch.extensions.register(new turboFoolishness());
