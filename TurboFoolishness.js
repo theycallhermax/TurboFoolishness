@@ -92,10 +92,6 @@ class turboFoolishness {
               "defaultValue": "This is a comment",
             }
           }
-        },  {
-          opcode: 'transfer',
-          blockType: Scratch.BlockType.COMMAND,
-          text: 'transfer [data] to transfer reporter',
         },
       ]
     };
