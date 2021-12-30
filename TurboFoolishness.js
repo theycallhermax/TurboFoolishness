@@ -96,16 +96,6 @@ class turboFoolishness {
           opcode: 'transfer',
           blockType: Scratch.BlockType.COMMAND,
           text: 'transfer [data] to transfer reporter',
-          "arguments": {
-            "data": {
-              "type": "string",
-              "defaultValue": "foo",
-            }
-          }
-        }, {
-          opcode: 'transferedcontent',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'transfered content',
         },
       ]
     };
@@ -133,12 +123,6 @@ dummyboolean() {
   };
 fetch({url}) {
     return fetch(url).then(response => response.text())
-  };
-transfer({data}) {
-    const transfer = data;
-  };
-transferedcontent() {
-    return transfer;
   };
 }
 Scratch.extensions.register(new turboFoolishness());
