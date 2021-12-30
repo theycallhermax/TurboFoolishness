@@ -107,10 +107,24 @@ class turboFoolishness {
               "type": Scratch.ArgumentType.BOOLEAN,
             },
             "two": {
-              "type": Scratch.ArgumentType.BOOLEAN
+              "type": Scratch.ArgumentType.BOOLEAN,
             },
             "three": {
               "type": Scratch.ArgumentType.BOOLEAN,
+            }
+          }
+        },  {
+          opcode: 'findJSON',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'find [name] in [string]',
+          "arguments": {
+            "name": {
+              "type": "string",
+              "defaultValue": "foo",
+            },
+            "string": {
+              "type": "string",
+              "defaultValue": '{"foo": foobar}',
             }
           }
         },
@@ -173,6 +187,19 @@ and(args) {
     } else {
       return 'false';
     }
+  };
+findJSON(args){
+  if (name in parsed) {
+    var out = parsed[name]
+    var t = typeof(out)
+    if (t == "string" || t == "number")
+        return out
+    if (t == "boolean")
+        return t ? 1 : 0
+    return JSON.stringify(out)
+} else {
+    return ""
+}
   };
 }
 Scratch.extensions.register(new turboFoolishness());
