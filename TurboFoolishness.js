@@ -7,7 +7,7 @@ class turboFoolishness {
       name: 'TurboFoolishness',
       menuIconURI: 'https://mwalters75.github.io/TurboFoolishness/img/extension.svg',
       blockIconURI: 'https://mwalters75.github.io/TurboFoolishness/img/block.svg',
-      docsURI: 'https://github.com/Mwalters75/TurboFoolishness#the-making-of-turbofoolishnessdocumentation',
+      docsURI: 'https://github.com/Mwalters75/TurboFoolishness#documentation',
       color1: '#9500ff',
       color2: '#000000',
       blocks: [
@@ -101,7 +101,7 @@ class turboFoolishness {
         },  {
           opcode: 'and',
           blockType: Scratch.BlockType.BOOLEAN,
-          text: '[one] or [two] or [three]',
+          text: '[one] and [two] and [three]',
           "arguments": {
             "one": {
               "type": Scratch.ArgumentType.BOOLEAN,
@@ -111,20 +111,6 @@ class turboFoolishness {
             },
             "three": {
               "type": Scratch.ArgumentType.BOOLEAN,
-            }
-          }
-        },  {
-          opcode: 'jsonExtract',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'find [name] in [string]',
-          "arguments": {
-            "name": {
-              "type": "string",
-              "defaultValue": "foo",
-            },
-            "string": {
-              "type": "string",
-              "defaultValue": '{"foo": foobar}',
             }
           }
         },
@@ -178,7 +164,7 @@ equaltonothing(args) {
   };
 miliseconds() {
   const date = new Date();
-  let miliseconds = date.getMilliseconds();
+  const miliseconds = date.getMilliseconds();
   return miliseconds;
   };
 and(args) {
@@ -188,20 +174,5 @@ and(args) {
       return 'false';
     }
   };
-  jsonExtract({name,data}) {
-    var parsed = JSON.parse(data)
-    if (name in parsed) {
-        var out = parsed[name]
-        var t = typeof(out)
-        if (t == "string" || t == "number")
-            return out
-        if (t == "boolean")
-            return t ? 1 : 0
-        return JSON.stringify(out)
-    }
-    else {
-        return ""
-    }
-  }
 }
 Scratch.extensions.register(new turboFoolishness());
