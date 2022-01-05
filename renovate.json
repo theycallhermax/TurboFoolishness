@@ -1,7 +1,5 @@
 {
   "extends": [
     "config:base"
-  ],
-    "timezone": "Canada/Eastern",
-    "schedule": ["after 12am"]
+  ]
 }
