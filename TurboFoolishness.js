@@ -126,6 +126,10 @@ class turboFoolishness {
               "defaultValue": "apple",
             }
           }
+        },  {
+          opcode: 'meta',
+          blockType: Scartch.BlockType.BOOLEAN,
+          text: 'is meta key pressed?',
         },
       ]
     }  
@@ -189,6 +193,13 @@ and(args) {
   };
 joinone(args) {
   return args.one;
+  };
+meta(event){
+  if (event.metaKey) {
+    return 'true';
+  } else {
+    return 'false';
+  }
   };
 }
 Scratch.extensions.register(new turboFoolishness());
