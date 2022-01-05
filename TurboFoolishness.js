@@ -12,6 +12,7 @@ class turboFoolishness {
       color1: '#9500ff',
       color2: '#000000',
       color3: '#4b0081',
+      color4: '#4b0081',
       blocks: [
         {
           opcode: 'fetch',
