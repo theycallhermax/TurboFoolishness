@@ -127,10 +127,14 @@ class turboFoolishness {
             }
           }
         },  {
-          opcode: 'meta',
+          opcode: 'true',
           blockType: Scartch.BlockType.BOOLEAN,
-          text: 'is meta key pressed?',
-        },
+          text: 'return true',
+        },  {
+          opcode: 'false',
+          blockType: Scratch.BlockType.BOOLEAN,
+          text: 'return false',
+        }
       ]
     }  
   }
@@ -194,12 +198,11 @@ and(args) {
 joinone(args) {
   return args.one;
   };
-meta(event){
-  if (event.metaKey) {
-    return 'true';
-  } else {
-    return 'false';
-  }
+true() {
+  return 'true';
+  };
+false() {
+  return 'false';
   };
 }
 Scratch.extensions.register(new turboFoolishness());
