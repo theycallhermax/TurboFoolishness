@@ -1,5 +1,6 @@
 const version = '1.0';
 const author = 'M.D. Walters';
+const self_destruct = '';
 class turboFoolishness {
   getInfo() {
     return {
@@ -113,6 +114,16 @@ class turboFoolishness {
               "type": Scratch.ArgumentType.BOOLEAN,
             }
           }
+        },  {
+          opcode: 'joinone',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'join [one]',
+          "arguments": {
+            "one": {
+              "type": "string",
+              "defaultValue": "apple",
+            }
+          }
         },
       ]
     }  
@@ -173,6 +184,9 @@ and(args) {
     } else {
       return 'false';
     }
+  };
+joinone(args) {
+  return args.one;
   };
 }
 Scratch.extensions.register(new turboFoolishness());
