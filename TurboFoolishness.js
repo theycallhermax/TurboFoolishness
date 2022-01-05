@@ -11,6 +11,7 @@ class turboFoolishness {
       docsURI: 'https://github.com/Mwalters75/TurboFoolishness#documentation',
       color1: '#9500ff',
       color2: '#000000',
+      color3: '#9500ff',
       blocks: [
         {
           opcode: 'fetch',
