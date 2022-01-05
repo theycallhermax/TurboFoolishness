@@ -126,6 +126,14 @@ class turboFoolishness {
               "defaultValue": "apple",
             }
           }
+        },  {
+          opcode: 'getLastKeyPressed',
+          text: formatMessage({
+          id: 'tw.blocks.lastKeyPressed',
+          default: 'last key pressed',
+          }),
+          disableMonitor: true,
+          blockType: BlockType.REPORTER
         },
       ]
     }  
@@ -189,6 +197,9 @@ and(args) {
   };
 joinone(args) {
   return args.one;
+  };
+getLastKeyPressed (args, util) {
+  return util.ioQuery('keyboard', 'getLastKeyPressed');
   };
 }
 Scratch.extensions.register(new turboFoolishness());
