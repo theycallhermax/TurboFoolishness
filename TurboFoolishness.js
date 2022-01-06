@@ -132,7 +132,7 @@ class turboFoolishness {
         },  {
           opcode: 'miniifthenelse',
           blockType: Scratch.BlockType.REPORTER,
-          text: 'return [text] if [if] else return [rejectiontext]',
+          text: 'if [if] then return [text] else return [else]',
           "arguments": {
             "text": {
               "type": "string",
@@ -141,12 +141,16 @@ class turboFoolishness {
             "if": {
               "type": Scratch.ArgumentType.BOOLEAN,
             },
-            "rejectiontext": {
+            "else": {
               "type": "string",
               "defaultValue": "foobar",
             }
           }
-        },
+        },  {
+          opcode: 'send',
+          blockType: Scratch.BlockType.COMMAND,
+          text: 'send [data]',
+        }
       ]
     }  
   }
