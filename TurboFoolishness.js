@@ -189,5 +189,8 @@ and(args) {
 joinone(args){
   return args.one;
   };
+newline() {
+  return '/n';
+  };
 }
 Scratch.extensions.register(new turboFoolishness());
