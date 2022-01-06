@@ -126,15 +126,7 @@ class turboFoolishness {
               "defaultValue": "apple",
             }
           }
-        },  {
-          opcode: 'true',
-          blockType: Scartch.BlockType.BOOLEAN,
-          text: 'return true',
-        },  {
-          opcode: 'false',
-          blockType: Scratch.BlockType.BOOLEAN,
-          text: 'return false',
-        }
+        },
       ]
     }  
   }
@@ -197,12 +189,6 @@ and(args) {
   };
 joinone(args) {
   return args.one;
-  };
-true() {
-  return 'true';
-  };
-false() {
-  return 'false';
   };
 }
 Scratch.extensions.register(new turboFoolishness());
