@@ -130,7 +130,7 @@ class turboFoolishness {
           blockType: Scratch.BlockType.REPORTER,
           text: 'start a new line',
         },  {
-          opcode: 'timedreturn',
+          opcode: 'miniifthenelse',
           blockType: Scratch.BlockType.REPORTER,
           text: 'return [text] if [if] else return [rejectiontext]',
           "arguments": {
@@ -198,7 +198,7 @@ joinone(args){
 newline() {
   return '/n';
   };
-timedreturn(args) {
+miniifthenelse(args) {
   if (args.if == true) {
     return args.text;
   } else {
