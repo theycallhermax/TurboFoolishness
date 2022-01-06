@@ -121,7 +121,7 @@ class turboFoolishness {
           text: 'join [one]',
           "arguments": {
             "one": {
-              "type": Scratch.ArgumentType.REPORTER,
+              "type": "string",
               "defaultValue": "apple",
             }
           }
