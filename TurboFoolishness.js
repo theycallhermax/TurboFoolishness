@@ -115,6 +115,16 @@ class turboFoolishness {
               "type": Scratch.ArgumentType.BOOLEAN,
             }
           }
+        },  {
+          opcode: 'joinone',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'join [one]',
+          "arguments": {
+            "one": {
+              "type": Scratch.ArgumentType.REPORTER,
+              "defaultValue": "apple",
+            }
+          }
         },
       ]
     }  
@@ -175,6 +185,9 @@ and(args) {
     } else {
       return 'false';
     }
+  };
+joinone(args){
+  return args.one;
   };
 }
 Scratch.extensions.register(new turboFoolishness());
