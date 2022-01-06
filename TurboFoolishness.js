@@ -206,7 +206,7 @@ miniifthenelse(args) {
   if (args.if == true) {
     return args.text;
   } else {
-    return args.rejectiontext;
+    return args.else;
   }
   };
 }
