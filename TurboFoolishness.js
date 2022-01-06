@@ -150,21 +150,6 @@ class turboFoolishness {
       ]
     }  
   }
-version() {
-    return version;
-  };
-author() {
-    return author;
-  };
-supportededitors() {
-    return 'TurboWarp E羊icques';
-  };
-sing() {
-    return 'La, la, la!';
-  };
-eat() {
-    return 'Num, num, crunch, crunch, chew, chew';
-  };
 fetch({url}) {
     return fetch(url).then(response => response.text())
   };
