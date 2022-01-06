@@ -132,7 +132,7 @@ class turboFoolishness {
         },  {
           opcode: 'timedreturn',
           blockType: Scratch.BlockType.REPORTER,
-          text: 'return [text] if [if], else return [rejectiontext]',
+          text: 'return [text] if [if] else return [rejectiontext]',
           "arguments": {
             "text": {
               "type": "string",
