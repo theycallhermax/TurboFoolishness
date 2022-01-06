@@ -130,7 +130,7 @@ class turboFoolishness {
           blockType: Scratch.BlockType.REPORTER,
           text: 'start a new line',
         },  {
-          opcode: 'miniifthenelse',
+          opcode: 'ifthenelse',
           blockType: Scratch.BlockType.REPORTER,
           text: 'if [if] then return [text] else return [else]',
           "arguments": {
@@ -146,6 +146,8 @@ class turboFoolishness {
               "defaultValue": "foobar",
             }
           }
+        },  {
+          opcode: '',
         },
       ]
     }  
@@ -198,7 +200,7 @@ joinone(args){
 newline() {
   return '/n';
   };
-miniifthenelse(args) {
+ifthenelse(args) {
   if (args.if == true) {
     return args.text;
   } else {
