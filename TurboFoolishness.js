@@ -146,11 +146,7 @@ class turboFoolishness {
               "defaultValue": "foobar",
             }
           }
-        },  {
-          opcode: 'send',
-          blockType: Scratch.BlockType.COMMAND,
-          text: 'send [data]',
-        }
+        },
       ]
     }  
   }
