@@ -146,16 +146,6 @@ class turboFoolishness {
               "defaultValue": "foobar",
             }
           }
-        },  {
-          opcode: 'alert',
-          blockType: Scratch.BlockType.COMMAND,
-          text: 'alert [text]',
-          "arguments": {
-            "text": {
-              "type": "string",
-              "defaultValue": "foo",
-            }
-          }
         },
       ]
     }  
@@ -214,9 +204,6 @@ ifthenelse(args) {
   } else {
     return args.else;
   }
-  };
-alert(args) {
-  return alert(args.text);
   };
 }
 Scratch.extensions.register(new turboFoolishness());

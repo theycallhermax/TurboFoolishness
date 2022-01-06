@@ -5,7 +5,7 @@ A copy of this list is also avalible in the reporter "supported editors"
 
 - [TurboWarp](https://turbowarp.org/editor?extension=https://mwalters75.github.io/TurboFoolishness/TurboFoolishness.js)
 - [E羊icques](https://sheeptester.github.io/scratch-gui/?url=https://mwalters75.github.io/TurboFoolishness/TurboFoolishness.js)
-- [:P](https://mwalters75.github.io/scratch-gui/?url=https://mwalters75.github.io/TurboFoolishness/TurboFoolishness.js)
+- [=P](https://mwalters75.github.io/scratch-gui/?url=https://mwalters75.github.io/TurboFoolishness/TurboFoolishness.js)
 ## Documentation
 This is the place you would/had been brought to when you clicked on the "Open Documentation" button.
 ### Fetch
