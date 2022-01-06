@@ -125,6 +125,27 @@ class turboFoolishness {
               "defaultValue": "apple",
             }
           }
+        },  {
+          opcode: 'newline',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'start a new line',
+        },  {
+          opcode: 'timedreturn',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'return [text] if [if], else return [rejectiontext]',
+          "arguments": {
+            "text": {
+              "type": "string",
+              "defaultValue": "foo",
+            },
+            "if": {
+              "type": Scratch.ArgumentType.BOOLEAN,
+            },
+            "rejectiontext": {
+              "type": "string",
+              "defaultValue": "foobar",
+            }
+          }
         },
       ]
     }  
@@ -191,6 +212,13 @@ joinone(args){
   };
 newline() {
   return '/n';
+  };
+timedreturn(args) {
+  if (args.if == true) {
+    return args.text;
+  } else {
+    return args.rejectiontext;
+  }
   };
 }
 Scratch.extensions.register(new turboFoolishness());
