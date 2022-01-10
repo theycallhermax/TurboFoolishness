@@ -196,7 +196,7 @@ joinone(args){
   return args.one;
   };
 newline() {
-  return '/n';
+  return '\n';
   };
 ifthenelse(args) {
   if (args.if == true) {
