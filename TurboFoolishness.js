@@ -215,8 +215,8 @@ ifthenelse(args) {
     return args.else;
   }
   };
-shorten(args) {
-  const fetchresposnse = fetch('https://api.shrtco.de/v2/shorten?url=' + args.link).then(response => response.text());
+shorten({link}) {
+  const fetchresposnse = fetch('https://api.shrtco.de/v2/shorten?url=' + link).then(response => response.text());
   return fetchresposnse.result.full_short_link;
   };
 }
