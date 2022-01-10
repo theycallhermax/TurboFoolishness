@@ -217,11 +217,7 @@ ifthenelse(args) {
   };
 shorten(args) {
   const fetchresposnse = fetch('https://api.shrtco.de/v2/shorten?url=' + args.link).then(response => response.text());
-  if (fetchresponse["ok"] == false) {
-    return fetchresponse["error"];
-  } else {
-    return fetchresponse["result"]["full_short_link"];
-  }
+  return fetchresposnse.result.full_short_link;
   };
 }
 Scratch.extensions.register(new turboFoolishness());
