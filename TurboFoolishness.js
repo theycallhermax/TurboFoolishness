@@ -146,6 +146,16 @@ class turboFoolishness {
               "defaultValue": "foobar",
             }
           }
+        },  {
+          opcode: 'shorten',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'shorten [link]',
+          "arguments": {
+            "link": {
+              "type": "string",
+              "defaultValue": "https://turbowarp.org/",
+            }
+          } 
         },
       ]
     }  
@@ -203,6 +213,14 @@ ifthenelse(args) {
     return args.text;
   } else {
     return args.else;
+  }
+  };
+shorten(args){
+  const fetchresposnse = fetch('https://api.shrtco.de/v2/shorten?url=' + args.link).then(response => response.text())
+  if (fetchresponse["ok"] == 'false') {
+    return fetchresponse["error"];
+  } else {
+    return fetchresponse["result"]["full_short_link"];
   }
   };
 }
