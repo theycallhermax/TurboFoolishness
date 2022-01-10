@@ -202,7 +202,7 @@ and(args) {
       return 'false';
     }
   };
-joinone(args){
+joinone(args) {
   return args.one;
   };
 newline() {
@@ -215,9 +215,9 @@ ifthenelse(args) {
     return args.else;
   }
   };
-shorten(args){
-  const fetchresposnse = fetch('https://api.shrtco.de/v2/shorten?url=' + args.link).then(response => response.text())
-  if (fetchresponse["ok"] == 'false') {
+shorten(args) {
+  const fetchresposnse = fetch('https://api.shrtco.de/v2/shorten?url=' + args.link).then(response => response.text());
+  if (fetchresponse["ok"] == false) {
     return fetchresponse["error"];
   } else {
     return fetchresponse["result"]["full_short_link"];
