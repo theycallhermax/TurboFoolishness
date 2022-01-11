@@ -146,6 +146,19 @@ class turboFoolishness {
               "defaultValue": "foobar",
             }
           }
+        },  {
+          opcode: 'ifthen',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'if [if] then return [text]',
+          "arguments": {
+            "if": {
+            "type": Scratch.ArgumentType.BOOLEAN,
+            },
+            "text": {
+              "type": "string",
+              "defaultValue": "foo",
+            }
+          }
         },
       ]
     }  
@@ -203,6 +216,11 @@ ifthenelse(args) {
     return args.text;
   } else {
     return args.else;
+  }
+  };
+ifthen(args) {
+  if (args.if == true) {
+    return args.text;
   }
   };
 }
