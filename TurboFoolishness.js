@@ -170,7 +170,8 @@ join(args) {
     return args.one + args.two + args.three;
   };
 addition(args) {
-    return (args.one + args.two + args.three);
+    const addition = args.one + args.two + args.three;
+    return addition;
   };
 equaltotrue(args) {
     if (args.boolean == true) {
