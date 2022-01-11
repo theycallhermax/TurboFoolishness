@@ -146,10 +146,6 @@ class turboFoolishness {
               "defaultValue": "foobar",
             }
           }
-        },  {
-          opcode: 'usingp',
-          blockType: Scratch.BlockType.BOOLEAN,
-          text: 'is =P?',
         },
       ]
     }  
@@ -207,13 +203,6 @@ ifthenelse(args) {
     return args.text;
   } else {
     return args.else;
-  }
-  };
-usinngp() {
-  if (document.documentURI == 'https://mwalters75.github.io/scratch-gui/') {
-    return 'true';
-  } else  {
-    return 'false';
   }
   };
 }
