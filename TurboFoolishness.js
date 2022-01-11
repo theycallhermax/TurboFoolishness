@@ -147,15 +147,9 @@ class turboFoolishness {
             }
           }
         },  {
-          opcode: 'shorten',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'shorten [link]',
-          "arguments": {
-            "link": {
-              "type": "string",
-              "defaultValue": "https://turbowarp.org/",
-            }
-          } 
+          opcode: 'usingp',
+          blockType: Scratch.BlockType.BOOLEAN,
+          text: 'is =P?',
         },
       ]
     }  
@@ -215,9 +209,12 @@ ifthenelse(args) {
     return args.else;
   }
   };
-shorten({link}) {
-  const fetchresposnse = fetch('https://api.shrtco.de/v2/shorten?url=' + link).then(response => response.text());
-  return fetchresposnse.result.full_short_link;
+usinngp() {
+  if (document.documentURI == 'https://mwalters75.github.io/scratch-gui/') {
+    return 'true';
+  } else  {
+    return 'false';
+  }
   };
 }
 Scratch.extensions.register(new turboFoolishness());
