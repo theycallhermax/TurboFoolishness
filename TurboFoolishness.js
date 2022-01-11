@@ -159,15 +159,6 @@ class turboFoolishness {
               "defaultValue": "foo",
             }
           }
-        },  {
-          opcode: 'when',
-          blockType: Scratch.BlockType.HAT,
-          text: 'when [boolean]',
-          "arguments": {
-            "boolean": {
-              "type": Scratch.ArgumentType.BOOLEAN,
-            }
-          }
         },
       ]
     }  
