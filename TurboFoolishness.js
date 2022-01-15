@@ -14,9 +14,9 @@ class turboFoolishness {
       color4: '#4b0081',
       blocks: [
         {
-          opcode: 'fetch',
+          opcode: 'get',
           blockType: Scratch.BlockType.REPORTER,
-          text: 'fetch [url]',
+          text: 'get [url]',
           "arguments": {
             "url": {
               "type": "string",
@@ -163,7 +163,7 @@ class turboFoolishness {
       ]
     }  
   }
-fetch({url}) {
+get({url}) {
     return fetch(url).then(response => response.text());
   };
 join(args) {
