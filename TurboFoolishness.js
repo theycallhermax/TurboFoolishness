@@ -224,8 +224,5 @@ ifthen(args) {
     return args.text;
   }
   };
-when(args) {
-  return args.boolean;
-  };
 }
 Scratch.extensions.register(new turboFoolishness());
