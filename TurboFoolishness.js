@@ -152,6 +152,20 @@ class turboFoolishness {
               "defaultValue": "foo",
             }
           }
+        },  {
+          opcode: 'getandparse',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'get [url], and extract [data]',
+          "arguments": {
+            "url": {
+              "type":"string",
+              "defaultValue":"https://mwalters75.github.io/TurboFoolishness/fetch",
+            },
+            "data": {
+              "type":"string",
+              "defaultValue":"foo",
+            }
+          }
         },
       ]
     }  
@@ -216,6 +230,11 @@ ifthen(args) {
   if (args.if == true) {
     return args.text;
   }
+  };
+getandparse(args) {
+  fetch(args.url)
+  const response = then(response => response.text());
+  return response.args.data;
   };
 }
 Scratch.extensions.register(new turboFoolishness());
