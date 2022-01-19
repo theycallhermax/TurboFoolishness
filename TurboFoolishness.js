@@ -239,6 +239,7 @@ ifthen(args) {
   };
 console(args) {
   console.log(args.text);
+  consoleStorage.push(args.text);
   };
 readconsole(args) {
   if (console.msg == args.text) {
