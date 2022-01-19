@@ -152,6 +152,16 @@ class turboFoolishness {
               "defaultValue": "foo",
             }
           }
+        },  {
+          opcode: 'console',
+          blockType: Scratch.BlockType.COMMAND,
+          text: 'send to console log [text]',
+          "arguments": {
+            "text": {
+              "type":"string",
+              "defaultValue":"foo",
+            }
+          }
         },
       ]
     }  
@@ -216,6 +226,9 @@ ifthen(args) {
   if (args.if == true) {
     return args.text;
   }
+  };
+console(args) {
+  console.log(args.text);
   };
 }
 Scratch.extensions.register(new turboFoolishness());
