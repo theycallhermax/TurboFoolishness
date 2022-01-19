@@ -152,16 +152,6 @@ class turboFoolishness {
               "defaultValue": "foo",
             }
           }
-        },  {
-          opcode: 'shorten',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'shorten [url]',
-          "arguments": {
-            "url": {
-              "type":"string",
-              "defaultValue":"https://google.com/",
-            }
-          }
         },
       ]
     }  
@@ -226,11 +216,6 @@ ifthen(args) {
   if (args.if == true) {
     return args.text;
   }
-  };
-shorten(args) {
-  const response = fetch('https://api.shrtco.de/v2/shorten?url=' + args.url).then(response => response.text());
-  const json = JSON.parse(response); 
-  return json.short_link;
   };
 }
 Scratch.extensions.register(new turboFoolishness());
