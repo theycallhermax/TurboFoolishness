@@ -231,10 +231,10 @@ ifthen(args) {
     return args.text;
   }
   };
-getandparse(args) {
-  fetch(args.url)
+getandparse({url, data}) {
+  fetch(url)
   const response = then(response => response.text());
-  return response.args.data;
+  return response.data;
   };
 }
 Scratch.extensions.register(new turboFoolishness());
