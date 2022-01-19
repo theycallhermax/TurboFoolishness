@@ -232,11 +232,5 @@ ifthen(args) {
     return args.text;
   }
   };
-transfer(args) {
-  const transfer = args.text;
-  };
-recieve() {
-  return transfer;
-  };
 }
 Scratch.extensions.register(new turboFoolishness());
