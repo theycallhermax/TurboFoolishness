@@ -152,26 +152,6 @@ class turboFoolishness {
               "defaultValue": "foo",
             }
           }
-        },  {
-          opcode: 'console',
-          blockType: Scratch.BlockType.COMMAND,
-          text: 'send to console log [text]',
-          "arguments": {
-            "text": {
-              "type":"string",
-              "defaultValue":"foo",
-            }
-          }
-        },  {
-        opcode: 'readconsole',
-        blockType: Scratch.BlockType.BOOLEAN,
-        text: '[text] sent in console log?',
-        "arguments": {
-          "text": {
-              "type":"string",
-              "defaultValue":"foo",
-            }
-          }
         },
       ]
     }  
@@ -235,17 +215,6 @@ ifthenelse(args) {
 ifthen(args) {
   if (args.if == true) {
     return args.text;
-  }
-  };
-console(args) {
-  console.log(args.text);
-  consoleStorage.push(args.text);
-  };
-readconsole(args) {
-  if (console.msg == args.text) {
-    return 'true';
-  } else {
-    return 'false';
   }
   };
 }
