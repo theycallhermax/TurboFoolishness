@@ -155,7 +155,7 @@ class turboFoolishness {
         },  {
           opcode: 'getandparse',
           blockType: Scratch.BlockType.REPORTER,
-          text: 'get [url], and extract [data]',
+          text: 'get [url] and extract [data]',
           "arguments": {
             "url": {
               "type":"string",
