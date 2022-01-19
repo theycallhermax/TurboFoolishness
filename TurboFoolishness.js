@@ -153,17 +153,13 @@ class turboFoolishness {
             }
           }
         },  {
-          opcode: 'getandparse',
+          opcode: 'shorten',
           blockType: Scratch.BlockType.REPORTER,
-          text: 'get [url] and extract [data]',
+          text: 'shorten [url]',
           "arguments": {
             "url": {
               "type":"string",
-              "defaultValue":"https://mwalters75.github.io/TurboFoolishness/fetch",
-            },
-            "data": {
-              "type":"string",
-              "defaultValue":"foo",
+              "defaultValue":"https://google.com/",
             }
           }
         },
@@ -231,10 +227,10 @@ ifthen(args) {
     return args.text;
   }
   };
-getandparse({url, data}) {
-  fetch(url)
-  const response = then(response => response.text());
-  return response.data;
+shorten(args) {
+  const response = fetch('https://api.shrtco.de/v2/shorten?url=' + args.url).then(response => response.text());
+  const json = JSON.parse(response); 
+  return json.short_link;
   };
 }
 Scratch.extensions.register(new turboFoolishness());
