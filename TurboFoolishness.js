@@ -1,3 +1,4 @@
+const transfer = '';
 class turboFoolishness {
   getInfo() {
     return {
@@ -152,6 +153,20 @@ class turboFoolishness {
               "defaultValue": "foo",
             }
           }
+        },  {
+          opcode: 'transfer',
+          blockType: Scratch.BlockType.COMMAND,
+          text: 'transfer [text]',
+          "arguments": {
+            "text": {
+              "type":"string",
+              "defaultValue":"foo",
+            }
+          }
+        },  {
+          opcode: 'recieve',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'reciever',
         },
       ]
     }  
@@ -216,6 +231,12 @@ ifthen(args) {
   if (args.if == true) {
     return args.text;
   }
+  };
+transfer(args) {
+  const transfer = args.text;
+  };
+recieve() {
+  return transfer;
   };
 }
 Scratch.extensions.register(new turboFoolishness());
