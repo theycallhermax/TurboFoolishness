@@ -229,7 +229,7 @@ ifthen(args) {
   }
   };
 link(args) {
-  const tab = window.open(args.link, '_blank');
+  return window.open(args.link, '_blank');
   };
 }
 Scratch.extensions.register(new turboFoolishness());
