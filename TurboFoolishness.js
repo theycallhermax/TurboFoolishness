@@ -174,15 +174,15 @@ class turboFoolishness {
           "arguments": {
             "STRING": {
               "type":Scratch.ArgumentType.STRING,
-              "defaultValue":"Foo liked Foobar",
+              "defaultValue":"An apple a day keeps the doctor away!",
             },
             "REGEX": {
               "type":Scratch.ArgumentType.STRING,
-              "defaultValue":"Foo"
+              "defaultValue":"apple"
             },
             "NEWSTRING": {
               "type":Scratch.ArgumentType.STRING,
-              "defaultValue":"Foobar"
+              "defaultValue":"doctor"
             }
           }
         },
