@@ -156,7 +156,7 @@ class turboFoolishness {
         },  {
         opcode: 'parseJSON',
         blockType: Scratch.BlockType.REPORTER,
-        text: '[PATH] of [JSON_STRING]',
+        text: 'extract [PATH] of [JSON_STRING]',
         arguments: {
           PATH: {
             type: Scratch.ArgumentType.STRING,
