@@ -153,16 +153,6 @@ class turboFoolishness {
               "defaultValue": "foo",
             }
           }
-        },  {
-          opcode: 'link',
-          blockType: Scratch.BlockType.COMMAND,
-          text: 'open [link] in new tab', 
-          "arguments": {
-            "link": {
-              "type":"string",
-              "defaultValue":"https://mwalters75.github.io/TurboFoolishness/",
-            }
-          }
         },
       ]
     }  
@@ -227,9 +217,6 @@ ifthen(args) {
   if (args.if == true) {
     return args.text;
   }
-  };
-link(args) {
-  return window.open(args.link, '_blank');
   };
 }
 Scratch.extensions.register(new turboFoolishness());
