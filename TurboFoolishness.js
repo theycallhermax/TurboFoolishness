@@ -154,19 +154,15 @@ class turboFoolishness {
             }
           }
         },  {
-          opcode: 'transfer',
+          opcode: 'link',
           blockType: Scratch.BlockType.COMMAND,
-          text: 'transfer [text]',
+          text: 'open [link] in new tab', 
           "arguments": {
-            "text": {
+            "link": {
               "type":"string",
-              "defaultValue":"foo",
+              "defaultValue":"https://mwalters75.github.io/TurboFoolishness/",
             }
           }
-        },  {
-          opcode: 'recieve',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'reciever',
         },
       ]
     }  
@@ -231,6 +227,9 @@ ifthen(args) {
   if (args.if == true) {
     return args.text;
   }
+  };
+link(args) {
+  const tab = window.open(args.link, '_blank');
   };
 }
 Scratch.extensions.register(new turboFoolishness());
