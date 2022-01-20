@@ -157,14 +157,14 @@ class turboFoolishness {
         opcode: 'parseJSON',
         blockType: Scratch.BlockType.REPORTER,
         text: 'extract [PATH] of [JSON_STRING]',
-        arguments: {
-          PATH: {
-            type: Scratch.ArgumentType.STRING,
-            defaultValue: 'fruit/apples'
+        "arguments": {
+          "PATH": {
+            "type":Scratch.ArgumentType.STRING,
+            "defaultValue":"fruit/apples"
           },
-          JSON_STRING: {
-            type: Scratch.ArgumentType.STRING,
-            defaultValue: '{"fruit": {"apples": 2, "bananas": 3}, "total_fruit": 5}'
+          "JSON_STRING": {
+            "type":Scratch.ArgumentType.STRING,
+            "defaultValue":'{"fruit": {"apples": 2, "bananas": 3}, "total_fruit": 5}'
             }
           }
         },
