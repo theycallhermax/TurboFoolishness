@@ -167,6 +167,24 @@ class turboFoolishness {
             "defaultValue":'{"fruit": {"apples": 2, "bananas": 3}, "total_fruit": 5}'
             }
           }
+        },  {
+          opcode: 'regexReplace',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'replace [STRING] using the rule [REGEX] with [NEWSTRING]',
+          "arguments": {
+            "STRING": {
+              "type":Scratch.ArgumentType.STRING,
+              "defaultValue":"Foo liked Foobar",
+            },
+            "REGEX": {
+              "type":Scratch.ArgumentType.STRING,
+              "defaultValue":"Foo"
+            },
+            "NEWSTRING": {
+              "type":Scratch.ArgumentType.STRING,
+              "defaultValue":"Foobar"
+            }
+          }
         },
       ]
     }  
@@ -251,6 +269,9 @@ parseJSON({PATH, JSON_STRING}) {
   } catch (err) {
     return '';
   }
+  };
+regexReplace({STRING, REGEX, NEWSTRING}) {
+  return STRING.toString().replace(new RegExp(REGEX, 'gi'), NEWSTRING);
   };
 }
 Scratch.extensions.register(new turboFoolishness());
