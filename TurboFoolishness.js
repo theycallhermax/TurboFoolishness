@@ -166,26 +166,29 @@ class turboFoolishness {
             "defaultValue":'{"fruit": {"apples": 2, "bananas": 3}, "total_fruit": 5}'
             }
           }
-        },  {
-          opcode: 'regexReplace',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'replace [STRING] using the rule [REGEX] with [NEWSTRING]',
-          "arguments": {
-            "STRING": {
-              "type":Scratch.ArgumentType.STRING,
-              "defaultValue":"An apple a day keeps the doctor away!",
-            },
-            "REGEX": {
-              "type":Scratch.ArgumentType.STRING,
-              "defaultValue":"apple"
-            },
-            "NEWSTRING": {
-              "type":Scratch.ArgumentType.STRING,
-              "defaultValue":"doctor"
-            }
-          }
         },
       ]
+getPrimitives() {
+  {
+    opcode: 'regexReplace',
+    blockType: Scratch.BlockType.REPORTER,
+    text: 'replace [STRING] using the rule [REGEX] with [NEWSTRING]',
+    "arguments": {
+      "STRING": {
+        "type":Scratch.ArgumentType.STRING,
+        "defaultValue":"An apple a day keeps the doctor away!",
+      },
+      "REGEX": {
+        "type":Scratch.ArgumentType.STRING,
+        "defaultValue":"apple"
+      },
+      "NEWSTRING": {
+        "type":Scratch.ArgumentType.STRING,
+        "defaultValue":"doctor"
+      }
+    }
+  },
+      }
     }  
   }
 get({url}) {
