@@ -1,4 +1,3 @@
-const transfer = '';
 class turboFoolishness {
   getInfo() {
     return {
