@@ -264,7 +264,11 @@ regexReplace({STRING, REGEX, NEWSTRING}) {
   return STRING.toString().replace(new RegExp(REGEX, 'gi'), NEWSTRING);
   };
 when(args) {
-  return args.boolean; 
+  if (args.boolean == true) {
+    return 'true';
+  } else {
+    return 'false';
+  } 
   };
 }
 Scratch.extensions.register(new turboFoolishness());
