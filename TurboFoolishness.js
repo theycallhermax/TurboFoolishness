@@ -155,7 +155,6 @@ class turboFoolishness {
           "arguments": {
             "colour": {
               "type": Scratch.ArgumentType.COLOR,
-              "defaultValue":"#9500ff",
             }
           }
         },
