@@ -29,7 +29,7 @@ class turboFoolishness {
         },  {
           opcode: 'join',
           blockType: Scratch.BlockType.REPORTER,
-          text: 'join [one][two][three]',
+          text: '[one][two][three]',
           "arguments": {
             "one": {
               "type": "string",
