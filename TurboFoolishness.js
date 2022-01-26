@@ -148,10 +148,6 @@ class turboFoolishness {
             "defaultValue":'{"fruit": {"apples": 2, "bananas": 3}, "total_fruit": 5}'
             }
           }
-        },  {
-          opcode: 'workingurl',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'get host url of current website',
         },
       ]
     }  
@@ -232,13 +228,6 @@ parseJSON({PATH, JSON_STRING}) {
   } catch (err) {
     return '';
   }
-  };
-regexReplace({STRING, REGEX, NEWSTRING}) {
-  return STRING.toString().replace(new RegExp(REGEX, 'gi'), NEWSTRING);
-  };
-workingurl() {
-  const currentHostname = window.location.hostname;
-  return currentHostname;
   };
 }
 Scratch.extensions.register(new turboFoolishness());
