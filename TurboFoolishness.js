@@ -166,15 +166,6 @@ class turboFoolishness {
             "defaultValue":'{"fruit": {"apples": 2, "bananas": 3}, "total_fruit": 5}'
             }
           }
-        },  {
-          opcode: 'when',
-          blockType: Scratch.BlockType.HAT,
-          text: 'when [boolean]',
-          "arguments": {
-            "boolean": {
-              "type": Scratch.ArgumentType.BOOLEAN,
-            }
-          }
         },
       ]
     }  
@@ -262,13 +253,6 @@ parseJSON({PATH, JSON_STRING}) {
   };
 regexReplace({STRING, REGEX, NEWSTRING}) {
   return STRING.toString().replace(new RegExp(REGEX, 'gi'), NEWSTRING);
-  };
-when(args) {
-  if (args.boolean == true) {
-    return 'true';
-  } else {
-    return 'false';
-  } 
   };
 }
 Scratch.extensions.register(new turboFoolishness());
