@@ -157,6 +157,16 @@ class turboFoolishness {
               "type": Scratch.ArgumentType.COLOR,
             }
           }
+        },  {
+          opcode: 'js',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'execute [js]',
+          "arguments": {
+            "js": {
+              "type":"string",
+              "defaultValue":'if ("foobar" != "foo") { return: "foo" };',
+            }
+          }
         },
       ]
     }  
@@ -240,6 +250,10 @@ parseJSON({PATH, JSON_STRING}) {
   };
 findcode(args) {
   return args.colour; 
+  };
+js(args) {
+  const javascript = eval(args.js);
+  return javascript;
   };
 }
 Scratch.extensions.register(new turboFoolishness());
