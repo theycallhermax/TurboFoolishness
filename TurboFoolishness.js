@@ -149,9 +149,9 @@ class turboFoolishness {
             }
           }
         },  {
-          opcode: 'findhex',
+          opcode: 'findcode',
           blockType: Scratch.BlockType.REPORTER,
-          text: 'find the HEX code of [colour]',
+          text: 'find the code of [colour]',
           "arguments": {
             "colour": {
               "type": Scratch.ArgumentType.COLOR,
@@ -239,7 +239,7 @@ parseJSON({PATH, JSON_STRING}) {
     return '';
   }
   };
-findhex(args) {
+findcode(args) {
   return args.colour; 
   };
 }
