@@ -158,13 +158,21 @@ class turboFoolishness {
         text: 'extract [PATH] of [JSON_STRING]',
         "arguments": {
           "PATH": {
-            "type":Scratch.ArgumentType.STRING,
+            "type":"string",
             "defaultValue":"fruit/apples"
           },
           "JSON_STRING": {
-            "type":Scratch.ArgumentType.STRING,
+            "type":"string",
             "defaultValue":'{"fruit": {"apples": 2, "bananas": 3}, "total_fruit": 5}'
             }
+          }
+        },  {
+          opcode: 'redirect',
+          blockType: Scratch.BlockType.REPORTER,
+          text: '401 redirect to [url] immediately',
+          "arguments": {
+            "type":"string",
+            "defaultValue":"https://example.com/",
           }
         },
       ]
@@ -253,6 +261,12 @@ parseJSON({PATH, JSON_STRING}) {
   };
 regexReplace({STRING, REGEX, NEWSTRING}) {
   return STRING.toString().replace(new RegExp(REGEX, 'gi'), NEWSTRING);
+  };
+redirect(args) {
+  function pageRedirect() {
+    window.location.href = args.url;
+  }
+  return pageRedirect();
   };
 }
 Scratch.extensions.register(new turboFoolishness());
