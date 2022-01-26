@@ -164,7 +164,7 @@ class turboFoolishness {
           "arguments": {
             "js": {
               "type":"string",
-              "defaultValue":'if ("foobar" != "foo") { return: "foo" };',
+              "defaultValue":'"Fo" + "o" + "bar"',
             }
           }
         },
