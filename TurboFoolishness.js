@@ -166,16 +166,6 @@ class turboFoolishness {
             "defaultValue":'{"fruit": {"apples": 2, "bananas": 3}, "total_fruit": 5}'
             }
           }
-        },  {
-          opcode: 'redirect',
-          blockType: Scratch.BlockType.COMMAND,
-          text: '401 redirect to [url] immediately',
-          "arguments": {
-            "url": {
-              "type":"string",
-              "defaultValue":"https://example.com/",
-            }
-          }
         },
       ]
     }  
@@ -263,12 +253,6 @@ parseJSON({PATH, JSON_STRING}) {
   };
 regexReplace({STRING, REGEX, NEWSTRING}) {
   return STRING.toString().replace(new RegExp(REGEX, 'gi'), NEWSTRING);
-  };
-redirect(args) {
-  function pageRedirect() {
-    window.location.href = args.url;
-  }
-  return pageRedirect();
   };
 }
 Scratch.extensions.register(new turboFoolishness());
