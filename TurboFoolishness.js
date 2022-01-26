@@ -27,6 +27,7 @@ class turboFoolishness {
             }
           }
         },  {
+          color1: '#40bf4a',
           opcode: 'join',
           blockType: Scratch.BlockType.REPORTER,
           text: 'join [one][two][three]',
@@ -228,6 +229,9 @@ parseJSON({PATH, JSON_STRING}) {
   } catch (err) {
     return '';
   }
+  };
+colour(args) {
+
   };
 }
 Scratch.extensions.register(new turboFoolishness());
