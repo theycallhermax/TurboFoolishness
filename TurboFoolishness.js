@@ -44,24 +44,6 @@ class turboFoolishness {
               "defaultValue": "pineapple",
             }
           }
-        }, {
-          opcode: 'addition',
-          blockType: Scratch.BlockType.REPORTER,
-          text: '[one] + [two] + [three]',
-          "arguments": {
-            "one": {
-              "type": Scratch.ArgumentType.NUMBER,
-              "defaultValue": "1",
-            },
-            "two": {
-              "type": Scratch.ArgumentType.NUMBER,
-              "defaultValue": "2",
-            },
-            "three": {
-              "type": Scratch.ArgumentType.NUMBER,
-              "defaultValue": "3",
-            }
-          }
         },  {
           opcode: 'equaltotrue',
           blockType: Scratch.BlockType.BOOLEAN,
@@ -166,6 +148,10 @@ class turboFoolishness {
             "defaultValue":'{"fruit": {"apples": 2, "bananas": 3}, "total_fruit": 5}'
             }
           }
+        },  {
+          opcode: 'workingurl',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'get host url of current website',
         },
       ]
     }  
@@ -175,10 +161,6 @@ get({url}) {
   };
 join(args) {
     return args.one + args.two + args.three;
-  };
-addition(args) {
-    const addition = args.one + args.two + args.three;
-    return addition;
   };
 equaltotrue(args) {
     if (args.boolean == true) {
@@ -253,6 +235,10 @@ parseJSON({PATH, JSON_STRING}) {
   };
 regexReplace({STRING, REGEX, NEWSTRING}) {
   return STRING.toString().replace(new RegExp(REGEX, 'gi'), NEWSTRING);
+  };
+workingurl() {
+  const currentHostname = window.location.hostname;
+  return currentHostname;
   };
 }
 Scratch.extensions.register(new turboFoolishness());
