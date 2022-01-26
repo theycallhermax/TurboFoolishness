@@ -27,7 +27,6 @@ class turboFoolishness {
             }
           }
         },  {
-          color1: '#40bf4a',
           opcode: 'join',
           blockType: Scratch.BlockType.REPORTER,
           text: 'join [one][two][three]',
@@ -149,6 +148,16 @@ class turboFoolishness {
             "defaultValue":'{"fruit": {"apples": 2, "bananas": 3}, "total_fruit": 5}'
             }
           }
+        },  {
+          opcode: 'findhex',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'find the HEX code of [colour]',
+          "arguments": {
+            "colour": {
+              "type": Scratch.ArgumentType.COLOR,
+              "defaultValue":"#9500ff",
+            }
+          }
         },
       ]
     }  
@@ -230,8 +239,8 @@ parseJSON({PATH, JSON_STRING}) {
     return '';
   }
   };
-colour(args) {
-
+findhex(args) {
+  return args.colour; 
   };
 }
 Scratch.extensions.register(new turboFoolishness());
