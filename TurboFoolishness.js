@@ -168,11 +168,13 @@ class turboFoolishness {
           }
         },  {
           opcode: 'redirect',
-          blockType: Scratch.BlockType.REPORTER,
+          blockType: Scratch.BlockType.COMMAND,
           text: '401 redirect to [url] immediately',
           "arguments": {
-            "type":"string",
-            "defaultValue":"https://example.com/",
+            "url": {
+              "type":"string",
+              "defaultValue":"https://example.com/",
+            }
           }
         },
       ]
