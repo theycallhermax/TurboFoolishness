@@ -5,6 +5,7 @@ class turboFoolishness {
       name: 'TurboFoolishness',
       docsURI: 'https://github.com/Mwalters75/TurboFoolishness#documentation',
       color1: '#9500ff',
+      color2: '#9500ff',
       blocks: [
         {
           opcode: 'get',
