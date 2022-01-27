@@ -159,7 +159,7 @@ class turboFoolishness {
           }
         },  {
           opcode: 'js',
-          blockType: Scratch.BlockType.REPORTER,
+          blockType: Scratch.BlockType.COMMAND,
           text: 'execute [js]',
           "arguments": {
             "js": {
