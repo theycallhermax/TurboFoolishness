@@ -92,16 +92,6 @@ class turboFoolishness {
             }
           }
         },  {
-          opcode: 'joinone',
-          blockType: Scratch.BlockType.REPORTER,
-          text: '[one]',
-          "arguments": {
-            "one": {
-              "type": "string",
-              "defaultValue": "apple",
-            }
-          }
-        },  {
           opcode: 'newline',
           blockType: Scratch.BlockType.REPORTER,
           text: 'start a new line',
@@ -147,15 +137,6 @@ class turboFoolishness {
           "JSON_STRING": {
             "type":"string",
             "defaultValue":'{"fruit": {"apples": 2, "bananas": 3}, "total_fruit": 5}'
-            }
-          }
-        },  {
-          opcode: 'findcode',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'find the code of [colour]',
-          "arguments": {
-            "colour": {
-              "type": Scratch.ArgumentType.COLOR,
             }
           }
         },  {
@@ -211,9 +192,6 @@ and(args) {
       return 'false';
     }
   };
-joinone(args) {
-  return args.one;
-  };
 newline() {
   return '\n';
   };
@@ -248,9 +226,6 @@ parseJSON({PATH, JSON_STRING}) {
   } catch (err) {
     return '';
   }
-  };
-findcode(args) {
-  return args.colour; 
   };
 js(args) {
   const javascript = eval(args.js);
