@@ -18,20 +18,6 @@ class turboFoolishness {
             }
           }
         },  {
-          opcode: 'post',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'post [body] to [url]',
-          "arguments": {
-            "body": {
-              "type": "string",
-              "defaultValue": "foo",
-            },
-            "url": {
-              "type": "string",
-              "defaultValue": "https://reqbin.com/echo/post/json",
-            }
-          }
-        },  {
           opcode: 'comment',
           blockType: Scratch.BlockType.COMMAND,
           text: 'comment: [comment]',
@@ -188,19 +174,6 @@ class turboFoolishness {
   }
 get({url}) {
     return fetch(url).then(response => response.text());
-  };
-post(args) {
-    const response = await fetch(args.url, {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-},
-    body: args.body,
-});
-  response.json().then(data => {
-    return data;
-});
   };
 join(args) {
     return args.one + args.two + args.three;
