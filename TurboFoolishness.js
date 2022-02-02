@@ -17,7 +17,7 @@ class turboFoolishness {
               "defaultValue": "https://reqbin.com/echo/get/json",
             }
           }
-        },  {
+        },  '---',  {
           opcode: 'comment',
           blockType: Scratch.BlockType.COMMAND,
           text: 'comment: [comment]',
@@ -27,7 +27,7 @@ class turboFoolishness {
               "defaultValue": "foo",
             }
           }
-        },  {
+        },  '---',  {
           opcode: 'join',
           blockType: Scratch.BlockType.REPORTER,
           text: '[one][two][three]',
@@ -45,7 +45,7 @@ class turboFoolishness {
               "defaultValue": "pineapple",
             }
           }
-        },  {
+        },  '---',  {
           opcode: 'equaltotrue',
           blockType: Scratch.BlockType.BOOLEAN,
           text: '[boolean] returns true?',
@@ -72,11 +72,11 @@ class turboFoolishness {
               "type": Scratch.ArgumentType.BOOLEAN,
             }
           }
-        },  {
+        },  '---',  {
           opcode: 'miliseconds',
           blockType: Scratch.BlockType.REPORTER,
           text: 'miliseconds',
-        },  {
+        },  '---',  {
           opcode: 'and',
           blockType: Scratch.BlockType.BOOLEAN,
           text: '[one] and [two] and [three]',
@@ -91,11 +91,11 @@ class turboFoolishness {
               "type": Scratch.ArgumentType.BOOLEAN,
             }
           }
-        },  {
+        },  '---',  {
           opcode: 'newline',
           blockType: Scratch.BlockType.REPORTER,
           text: 'start a new line',
-        },  {
+        },  '---',  {
           opcode: 'ifthenelse',
           blockType: Scratch.BlockType.REPORTER,
           text: 'if [if] then return [text] else return [else]',
@@ -125,7 +125,7 @@ class turboFoolishness {
               "defaultValue": "foo",
             }
           }
-        },  {
+        },  '---',  {
         opcode: 'parseJSON',
         blockType: Scratch.BlockType.REPORTER,
         text: 'extract [PATH] of [JSON_STRING]',
@@ -139,7 +139,7 @@ class turboFoolishness {
             "defaultValue":'{"fruit": {"apples": 2, "bananas": 3}, "total_fruit": 5}'
             }
           }
-        },  {
+        },  '---',  {
           opcode: 'js',
           blockType: Scratch.BlockType.COMMAND,
           text: 'execute [js]',
