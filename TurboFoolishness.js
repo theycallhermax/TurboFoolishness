@@ -149,6 +149,14 @@ class turboFoolishness {
               "defaultValue":'"Fo" + "o" + "bar"',
             }
           }
+        },  '---',  {
+          opcode: 'true',
+          blockType: Scratch.BlockType.BOOLEAN,
+          text: 'return true',
+        },  {
+          opcode: 'false',
+          blockType: Scratch.BlockType.BOOLEAN,
+          text: 'return false',
         },
       ]
     }  
@@ -230,6 +238,12 @@ parseJSON({PATH, JSON_STRING}) {
 js(args) {
   const javascript = eval(args.js);
   return javascript;
+  };
+true() {
+  return 'true';
+  };
+false() {
+  return 'false';
   };
 }
 Scratch.extensions.register(new turboFoolishness());
