@@ -159,6 +159,16 @@ class turboFoolishness {
           opcode: 'false',
           blockType: Scratch.BlockType.BOOLEAN,
           text: 'return false',
+        },  {
+          opcode: 'stringtoboolean',
+          blockType: Scratch.BlockType.BOOLEAN,
+          text: '[string]',
+          "arguments": {
+            "string": {
+              "type":"string",
+              "defaultValue":"true",
+            }
+          }
         },
       ]
     }  
@@ -243,6 +253,9 @@ true() {
   };
 false() {
   return 'false';
+  };
+stringtoboolean(args) {
+  return args.string.toString().toLowerCase();
   };
 }
 Scratch.extensions.register(new turboFoolishness());
