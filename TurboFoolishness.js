@@ -168,7 +168,7 @@ class turboFoolishness {
     }  
   }
 get({url}) {
-    return fetch(url).then(response => response.text());
+    return fetch("https://api.allorigins.win/raw?url=" + url).then(res => res.text()).catch(err => 'ERROR');
   };
 join(args) {
     return args.one + args.two + args.three;
