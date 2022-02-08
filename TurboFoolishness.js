@@ -98,10 +98,6 @@ class turboFoolishness {
             }
           }
         },  '---',  {
-          opcode: 'newline',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'start a new line',
-        },  '---',  {
           opcode: 'ifthenelse',
           blockType: Scratch.BlockType.REPORTER,
           text: 'if [if] then return [text] else return [else]',
@@ -205,9 +201,6 @@ and(args) {
     } else {
       return 'false';
     }
-  };
-newline() {
-  return '\n';
   };
 ifthenelse(args) {
   if (args.if == true) {
