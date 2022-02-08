@@ -1,17 +1,13 @@
 # TurboFoolishness
 TurboFoolishness is a TurboWarp custom extension
 ## Supported Editors
-A copy of this list is also avalible in the reporter "supported editors"
-
 - [TurboWarp](https://turbowarp.org/editor?extension=https://mwalters75.github.io/TurboFoolishness/TurboFoolishness.js)
 - [E羊icques](https://sheeptester.github.io/scratch-gui/?url=https://mwalters75.github.io/TurboFoolishness/TurboFoolishness.js)
 - [undefined](https://mwalters75.github.io/scratch-gui/?url=https://mwalters75.github.io/TurboFoolishness/TurboFoolishness.js)
 ## Documentation
 This is the place you would/had been brought to when you clicked on the "Open Documentation" button.
 ### Fetch
-*This has been known to not work sometimes, returning `undefined`. Use at your own risk. Recommended usage is meant to connect to APIs (JSON)*
-
-**Fetch** is a reporter made to connect to websites. As described above, Fetch is known not to work at times, and it's recomended usage is to connect to APIs. At this time, no built-in JSON extractors are included with TurboFoolishness. To extract it, you will need a seprate extension.
+**Fetch** is a reporter made to connect to websites. It used to not connect to some websites, due to TurboFoolishness making GET requests directly to the website. TurboFoolishness now uses AllOrgin's API for fetching these kinds of websites.
 
 ### Comment
 
@@ -48,7 +44,7 @@ The **Comment** block is made to have a reporter input, and since this is made t
 
 ### And
 
-**And** is a boolean that has one more input for booleans. It will return true when all of the booleans return true at the same time.
+**And** is a boolean that has one more input for booleans. It will return true when all of the booleans return true at the same time. 
 ## To-Do List
 - [x] Make TurboFoolishness
 - [x] Make blocks, reporters, hats, etc
