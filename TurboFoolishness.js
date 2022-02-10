@@ -13,7 +13,7 @@ class turboFoolishness {
           text: 'get [url]',
           "arguments": {
             "url": {
-              "type": "string",
+              "type": Scratch.ArgumentType.STRING,
               "defaultValue": "https://reqbin.com/echo/get/json",
             }
           }
@@ -23,7 +23,7 @@ class turboFoolishness {
           text: 'get [url] with old fetcher',
           "arguments": {
             "url": {
-              "type": "string",
+              "type": Scratch.ArgumentType.STRING,
               "defaultValue": "https://reqbin.com/echo/get/json",
             }
           }
@@ -33,7 +33,7 @@ class turboFoolishness {
           text: 'comment: [comment]',
           "arguments": {
             "comment": {
-              "type": "string",
+              "type": Scratch.ArgumentType.STRING,
               "defaultValue": "foo",
             }
           }
@@ -43,15 +43,15 @@ class turboFoolishness {
           text: '[one][two][three]',
           "arguments": {
             "one": {
-              "type": "string",
+              "type": Scratch.ArgumentType.STRING,
               "defaultValue": "apple ",
             },
             "two": {
-              "type": "string",
+              "type": Scratch.ArgumentType.STRING,
               "defaultValue": "banana ",
             },
             "three": {
-              "type": "string",
+              "type": Scratch.ArgumentType.STRING,
               "defaultValue": "pineapple",
             }
           }
@@ -107,14 +107,14 @@ class turboFoolishness {
           text: 'if [if] then return [text] else return [else]',
           "arguments": {
             "text": {
-              "type": "string",
+              "type": Scratch.ArgumentType.STRING,
               "defaultValue": "foo",
             },
             "if": {
               "type": Scratch.ArgumentType.BOOLEAN,
             },
             "else": {
-              "type": "string",
+              "type": Scratch.ArgumentType.STRING,
               "defaultValue": "foobar",
             }
           }
@@ -127,7 +127,7 @@ class turboFoolishness {
             "type": Scratch.ArgumentType.BOOLEAN,
             },
             "text": {
-              "type": "string",
+              "type": Scratch.ArgumentType.STRING,
               "defaultValue": "foo",
             }
           }
@@ -137,11 +137,11 @@ class turboFoolishness {
         text: 'extract [PATH] of [JSON_STRING]',
         "arguments": {
           "PATH": {
-            "type":"string",
+            "type":Scratch.ArgumentType.STRING,
             "defaultValue":"fruit/apples"
           },
           "JSON_STRING": {
-            "type":"string",
+            "type":Scratch.ArgumentType.STRING,
             "defaultValue":'{"fruit": {"apples": 2, "bananas": 3}, "total_fruit": 5}'
             }
           }
@@ -151,7 +151,7 @@ class turboFoolishness {
           text: 'execute [js]',
           "arguments": {
             "js": {
-              "type":"string",
+              "type": Scratch.ArgumentType.STRING,
               "defaultValue":'"Fo" + "o" + "bar"',
             }
           }
@@ -169,8 +169,22 @@ class turboFoolishness {
           text: '[string]',
           "arguments": {
             "string": {
-              "type":"string",
+              "type": Scratch.ArgumentType.STRING,
               "defaultValue":"true",
+            }
+          }
+        },  '---',  {
+          opcode: 'strict_equality',
+          blockType: Scratch.BlockType.BOOLEAN,
+          text: '[sentance] === [other_sentance]',
+          "arguments": {
+            "sentance": {
+              "type": Scratch.ArgumentType.STRING,
+              "defaultValue": "Foo"
+            },
+            "other_sentance": {
+              "type": Scratch.ArgumentType.STRING,
+              "defaultValue": "Foobar"
             }
           }
         },
@@ -263,6 +277,9 @@ false() {
   };
 stringtoboolean(args) {
   return args.string.toString().toLowerCase();
+  };
+strict_equality(args) {
+  return (args.sentance === args.other_sentance);
   };
 }
 Scratch.extensions.register(new turboFoolishness());
