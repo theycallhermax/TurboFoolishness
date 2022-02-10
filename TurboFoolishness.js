@@ -17,7 +17,17 @@ class turboFoolishness {
               "defaultValue": "https://reqbin.com/echo/get/json",
             }
           }
-        },  '---',  {
+        },  {
+          opcode: 'get_old',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'get [url] with old fetcher',
+          "arguments": {
+            "url": {
+              "type": "string",
+              "defaultValue": "https://reqbin.com/echo/get/json",
+            }
+          }
+      },  '---',  {
           opcode: 'comment',
           blockType: Scratch.BlockType.COMMAND,
           text: 'comment: [comment]',
@@ -169,6 +179,9 @@ class turboFoolishness {
   }
 get({url}) {
     return fetch("https://api.allorigins.win/raw?url=" + url).then(res => res.text()).catch(err => 'ERROR');
+  };
+get_old({url}) {
+    return fetch(url).then(response => response.text());
   };
 join(args) {
     return args.one + args.two + args.three;
