@@ -178,7 +178,7 @@ class turboFoolishness {
     }  
   }
 get({url}) {
-    return fetch("https://api.allorigins.win/raw?url=" + url).then(res => res.text()).catch(err => 'ERROR');
+    return fetch("https://api.allorigins.win/raw?url=" + url).then(response => response.text()).catch(err => 'ERROR');
   };
 get_old({url}) {
     return fetch(url).then(response => response.text());
