@@ -1,10 +1,4 @@
 class turboFoolishness {
-  constructor (runtime) {
-    /**
-     * @type {Runtime}
-     */
-    this.runtime = runtime;
-}
   getInfo() {
     return {
       id: 'turbofoolishness',
