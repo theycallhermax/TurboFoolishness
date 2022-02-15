@@ -142,7 +142,7 @@ class turboFoolishness {
           },
           "JSON_STRING": {
             "type":Scratch.ArgumentType.STRING,
-            "defaultValue":'{"fruit": {"apples": 2, "bananas": 3}, "total_fruit": 5}'
+            "defaultValue":'{ "fruit": {"apples": 2, "bananas": 3}, "total_fruit": 5 }'
             }
           }
         },  '---',  {
@@ -176,7 +176,7 @@ class turboFoolishness {
         },  '---',  {
           opcode: 'strict_equality',
           blockType: Scratch.BlockType.BOOLEAN,
-          text: '[sentance] === [other_sentance]',
+          text: '[sentance] exactly [other_sentance]?',
           "arguments": {
             "sentance": {
               "type": Scratch.ArgumentType.STRING,
