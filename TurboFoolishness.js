@@ -270,13 +270,21 @@ js(args) {
   return javascript;
   };
 true() {
-  return 'true';
+  return true;
   };
 false() {
-  return 'false';
+  return false;
   };
 stringtoboolean(args) {
-  return args.string.toString().toLowerCase();
+  if (args.string == 'true') {
+    return true;
+  } else {
+    if (args.string == 'false') {
+      return false;
+    } else {
+      return args.string.toString().toLowerCase();
+  }
+  }
   };
 strict_equality(args) {
   return (args.sentance === args.other_sentance);
