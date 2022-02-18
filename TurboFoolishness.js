@@ -176,7 +176,7 @@ class turboFoolishness {
         },  '---',  {
           opcode: 'strict_equality',
           blockType: Scratch.BlockType.BOOLEAN,
-          text: '[sentance] exactly [other_sentance]?',
+          text: 'is [sentance] EXACTLY [other_sentance]?',
           "arguments": {
             "sentance": {
               "type": Scratch.ArgumentType.STRING,
@@ -276,15 +276,7 @@ false() {
   return false;
   };
 stringtoboolean(args) {
-  if (args.string == 'true') {
-    return true;
-  } else {
-    if (args.string == 'false') {
-      return false;
-    } else {
-      return args.string.toString().toLowerCase();
-  }
-  }
+  return args.string.toString().toLowerCase();
   };
 strict_equality(args) {
   return (args.sentance === args.other_sentance);
