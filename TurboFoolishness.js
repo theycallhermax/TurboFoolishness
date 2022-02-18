@@ -187,6 +187,26 @@ class turboFoolishness {
               "defaultValue": "Foobar"
             }
           }
+        },  '---',  {
+          opcode: 'string_to_base',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'convert [string] to Base64',
+          "arguments": {
+            "string": {
+              "type": Scratch.ArgumentType.STRING,
+              "defaultValue": "foo",
+            }
+          }
+        },  {
+        opcode: 'base_to_string',
+        blockType: Scratch.BlockType.REPORTER,
+        text: 'convert [string] to string',
+        "arguments": {
+          "string": {
+            "type": Scratch.ArgumentType.STRING,
+            "defaultValue": "foo",
+            }
+          }
         },
       ]
     }  
@@ -280,6 +300,12 @@ stringtoboolean(args) {
   };
 strict_equality(args) {
   return (args.sentance === args.other_sentance);
+  };
+string_to_base(args) {
+  return btoa(encodeUnicode(args.string));
+  };
+base_to_string(args) {
+  return atob(decodeUnicode(args.string));
   };
 }
 Scratch.extensions.register(new turboFoolishness());
