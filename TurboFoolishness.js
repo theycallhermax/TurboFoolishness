@@ -104,7 +104,7 @@ class turboFoolishness {
         },  '---',  {
           opcode: 'ifthenelse',
           blockType: Scratch.BlockType.REPORTER,
-          text: 'if [if] then return [text] else return [else]',
+          text: 'if [if] then [text] else [else]',
           "arguments": {
             "text": {
               "type": Scratch.ArgumentType.STRING,
@@ -121,7 +121,7 @@ class turboFoolishness {
         },  {
           opcode: 'ifthen',
           blockType: Scratch.BlockType.REPORTER,
-          text: 'if [if] then return [text]',
+          text: 'if [if] then [text]',
           "arguments": {
             "if": {
             "type": Scratch.ArgumentType.BOOLEAN,
