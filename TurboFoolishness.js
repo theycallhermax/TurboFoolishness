@@ -191,34 +191,34 @@ class turboFoolishness {
       ]
     }  
   }
-get({url}) {
-    return fetch("https://api.allorigins.win/raw?url=" + url).then(response => response.text()).catch(err => 'ERROR');
+get(args) {
+    return fetch("https://api.allorigins.win/raw?url=" + args.url).then(response => response.text()).catch(err => 'ERROR');
   };
-get_old({url}) {
-    return fetch(url).then(response => response.text());
+get_old(args) {
+    return fetch(args.url).then(response => response.text());
   };
 join(args) {
     return args.one + args.two + args.three;
   };
 equaltotrue(args) {
     if (args.boolean == true) {
-      return 'true';
+      return true;
     } else {
-      return 'false';
+      return false;
     }
   };
 equaltofalse(args) {
     if (args.boolean == false) {
-      return 'true';
+      return true;
     } else {
-      return 'false';
+      return false;
     }
   };
 equaltonothing(args) {
     if (args.boolean == '') {
-      return 'true';
+      return true;
     } else {
-      return 'false';
+      return false;
     }
   };
 miliseconds() {
@@ -227,11 +227,7 @@ miliseconds() {
   return miliseconds;
   };
 and(args) {
-  if (args.one && args.two && args.three) {
-      return 'true';
-    } else {
-      return 'false';
-    }
+  return (args.one && args.two && args.three);
   };
 ifthenelse(args) {
   if (args.if == true) {
@@ -245,14 +241,14 @@ ifthen(args) {
     return args.text;
   }
   };
-parseJSON({PATH, JSON_STRING}) {
+parseJSON(args) {
   try {
-    const path = PATH.toString().split('/').map(prop => decodeURIComponent(prop));
+    const path = args.PATH.toString().split('/').map(prop => decodeURIComponent(prop));
     if (path[0] === '') path.splice(0, 1);
     if (path[path.length - 1] === '') path.splice(-1, 1);
     let json;
     try {
-      json = JSON.parse(' ' + JSON_STRING);
+      json = JSON.parse(' ' + args.JSON_STRING);
     } catch (e) {
       return e.message;
     }
