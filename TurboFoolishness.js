@@ -138,11 +138,11 @@ class turboFoolishness {
         "arguments": {
           "PATH": {
             "type":Scratch.ArgumentType.STRING,
-            "defaultValue":"fruit/apples"
+            "defaultValue":"foo"
           },
           "JSON_STRING": {
             "type":Scratch.ArgumentType.STRING,
-            "defaultValue":'{ "fruit": {"apples": 2, "bananas": 3}, "total_fruit": 5 }'
+            "defaultValue":'{ "foo": "foobar" }'
             }
           }
         },  '---',  {
