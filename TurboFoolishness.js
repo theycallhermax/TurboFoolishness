@@ -158,11 +158,11 @@ class turboFoolishness {
         },  '---',  {
           opcode: 'true',
           blockType: Scratch.BlockType.BOOLEAN,
-          text: 'return true',
+          text: 'true',
         },  {
           opcode: 'false',
           blockType: Scratch.BlockType.BOOLEAN,
-          text: 'return false',
+          text: 'false',
         },  {
           opcode: 'stringtoboolean',
           blockType: Scratch.BlockType.BOOLEAN,
