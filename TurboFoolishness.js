@@ -230,7 +230,7 @@ and(args) {
   return (args.one && args.two && args.three);
   };
 ifthenelse(args) {
-  if (args.if == true) {
+  if (args.if) {
     return args.text;
   } else {
     return args.else;
