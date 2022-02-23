@@ -187,7 +187,27 @@ class turboFoolishness {
               "defaultValue": "Foobar"
             }
           }
-        }
+        },  '---',  {
+          opcode: 'json_parse',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'parse [string]',
+          "arguments": {
+            "string": {
+              "type": Scratch.ArgumentType.STRING,
+              "defaultValue": '{ "foo": "foobar" }'
+            }
+          }
+        },  {
+          opcode: 'json_stringify',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'stringify [string]',
+          "arguments": {
+            "string": {
+              "type": Scratch.ArgumentType.STRING,
+              "defaultValue": '{ "foo": "foobar" }'
+            }
+          }
+        },
       ]
     }  
   }
@@ -276,6 +296,16 @@ stringtoboolean(args) {
   };
 strict_equality(args) {
   return (args.sentance === args.other_sentance);
+  };
+json_parse(args) {
+  const json = args.string;
+  const obj = JSON.parse(json);
+  return obj;
+  };
+json_parse(args) {
+  const json = args.string;
+  const obj = JSON.stringify(json);
+  return obj;
   };
 }
 Scratch.extensions.register(new turboFoolishness());
