@@ -87,21 +87,6 @@ class turboFoolishness {
           blockType: Scratch.BlockType.REPORTER,
           text: 'miliseconds',
         },  '---',  {
-          opcode: 'and',
-          blockType: Scratch.BlockType.BOOLEAN,
-          text: '[one] and [two] and [three]',
-          "arguments": {
-            "one": {
-              "type": Scratch.ArgumentType.BOOLEAN,
-            },
-            "two": {
-              "type": Scratch.ArgumentType.BOOLEAN,
-            },
-            "three": {
-              "type": Scratch.ArgumentType.BOOLEAN,
-            }
-          }
-        },  '---',  {
           opcode: 'ifthenelse',
           blockType: Scratch.BlockType.REPORTER,
           text: 'if [if] then [text] else [else]',
@@ -225,9 +210,6 @@ miliseconds() {
   const date = new Date();
   const miliseconds = date.getMilliseconds();
   return miliseconds;
-  };
-and(args) {
-  return (args.one && args.two && args.three);
   };
 ifthenelse(args) {
   if (args.if) {
