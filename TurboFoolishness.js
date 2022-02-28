@@ -155,25 +155,13 @@ get_old(args) {
     return fetch(args.url).then(response => response.text());
   };
 equaltotrue(args) {
-    if (args.boolean == true) {
-      return true;
-    } else {
-      return false;
-    }
+  return args.boolean;
   };
 equaltofalse(args) {
-    if (args.boolean == false) {
-      return true;
-    } else {
-      return false;
-    }
+  return (!(args.boolean));
   };
 equaltonothing(args) {
-    if (args.boolean == '') {
-      return true;
-    } else {
-      return false;
-    }
+  return (args.boolean == '');
   };
 miliseconds() {
   const date = new Date();
