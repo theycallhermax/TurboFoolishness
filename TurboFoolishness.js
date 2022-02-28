@@ -28,34 +28,6 @@ class turboFoolishness {
             }
           }
       },  '---',  {
-          opcode: 'comment',
-          blockType: Scratch.BlockType.COMMAND,
-          text: 'comment: [comment]',
-          "arguments": {
-            "comment": {
-              "type": Scratch.ArgumentType.STRING,
-              "defaultValue": "foo",
-            }
-          }
-        },  '---',  {
-          opcode: 'join',
-          blockType: Scratch.BlockType.REPORTER,
-          text: '[one][two][three]',
-          "arguments": {
-            "one": {
-              "type": Scratch.ArgumentType.STRING,
-              "defaultValue": "apple ",
-            },
-            "two": {
-              "type": Scratch.ArgumentType.STRING,
-              "defaultValue": "banana ",
-            },
-            "three": {
-              "type": Scratch.ArgumentType.STRING,
-              "defaultValue": "pineapple",
-            }
-          }
-        },  '---',  {
           opcode: 'equaltotrue',
           blockType: Scratch.BlockType.BOOLEAN,
           text: '[boolean] returns true?',
@@ -181,9 +153,6 @@ get(args) {
   };
 get_old(args) {
     return fetch(args.url).then(response => response.text());
-  };
-join(args) {
-    return args.one + args.two + args.three;
   };
 equaltotrue(args) {
     if (args.boolean == true) {
