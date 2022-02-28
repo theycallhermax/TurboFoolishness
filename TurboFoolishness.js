@@ -155,7 +155,11 @@ get_old(args) {
     return fetch(args.url).then(response => response.text());
   };
 equaltotrue(args) {
-  return args.boolean;
+  if (args.boolean == true) {
+    return true;
+  } else {
+    return false;
+  }
   };
 equaltofalse(args) {
   return (!(args.boolean));
