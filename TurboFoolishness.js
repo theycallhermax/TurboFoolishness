@@ -1,5 +1,5 @@
 class turboFoolishness {
-  constructor (runtime) {
+  constructor(runtime) {
     /**
      * @type {Runtime}
      */
