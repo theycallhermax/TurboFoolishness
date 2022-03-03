@@ -27,17 +27,7 @@ class turboFoolishness {
               "menu": "allorgins_get",
             }
           }
-        },  {
-          opcode: 'get_old',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'get [url] with old fetcher',
-          "arguments": {
-            "url": {
-              "type": Scratch.ArgumentType.STRING,
-              "defaultValue": "https://reqbin.com/echo/get/json",
-            }
-          }
-      },  '---',  {
+        },  '---',  {
           opcode: 'equaltotrue',
           blockType: Scratch.BlockType.BOOLEAN,
           text: '[boolean] returns true?',
