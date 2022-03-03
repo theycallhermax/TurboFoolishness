@@ -11,7 +11,6 @@ class turboFoolishness {
       name: 'TurboFoolishness',
       docsURI: 'https://github.com/Mwalters75/TurboFoolishness#documentation',
       color1: "#9500ff",
-      description: "The developer's companion",
       blocks: [
         {
           opcode: 'get',
