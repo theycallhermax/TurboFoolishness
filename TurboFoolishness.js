@@ -158,7 +158,6 @@ class turboFoolishness {
       ],
       "menus": {
         "allorgins_get": {
-          acceptReporters: true,
           items: [{text:"AllOrgins",value:"https://api.allorigins.win/raw?url="},{text:"GET",value:""}],
         },
       }
