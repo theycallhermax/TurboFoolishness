@@ -152,7 +152,7 @@ class turboFoolishness {
           }
         },
       ]
-    }  
+    }
   }
 get(args) {
     return fetch("https://api.allorigins.win/raw?url=" + args.url).then(response => response.text());
