@@ -24,7 +24,6 @@ class turboFoolishness {
             },
             "allorgins_get": {
               "type": Scratch.ArgumentType.STRING,
-              "defaultValue": "AllOrgins",
               "menu": "allorgins_get",
             }
           }
@@ -169,7 +168,6 @@ class turboFoolishness {
       ],
       "menus": {
         "allorgins_get": {
-          acceptReporters: false,
           items: [{text:"AllOrgins",value:"https://api.allorigins.win/raw?url="},{text:"GET",value:""}],
         }
       }
