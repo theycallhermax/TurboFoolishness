@@ -159,7 +159,7 @@ class turboFoolishness {
       "menus": {
         "allorgins_get": {
           items: [{text:"AllOrgins",value:"https://api.allorigins.win/raw?url="},{text:"GET",value:""}],
-        }
+        },
       }
     }
   }
