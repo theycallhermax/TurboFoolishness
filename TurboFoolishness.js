@@ -118,7 +118,17 @@ class turboFoolishness {
               "defaultValue":'"Fo" + "o" + "bar"',
             }
           }
-        },  '---',  {
+        },  {
+          opcode: 'js_reporter',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'execute [js]',
+          "arguments": {
+            "js": {
+              "type": Scratch.ArgumentType.STRING,
+              "defaultValue": '"Fo" + "o" + "bar"',
+            }
+          }
+        }, '---',  {
           opcode: 'true',
           blockType: Scratch.BlockType.BOOLEAN,
           text: 'true',
@@ -211,6 +221,10 @@ parseJSON(args) {
   }
   };
 js(args) {
+  const javascript = eval(args.js);
+  return javascript;
+  };
+js_reporter(args) {
   const javascript = eval(args.js);
   return javascript;
   };
