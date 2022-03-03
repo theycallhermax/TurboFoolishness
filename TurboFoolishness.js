@@ -11,15 +11,21 @@ class turboFoolishness {
       name: 'TurboFoolishness',
       docsURI: 'https://github.com/Mwalters75/TurboFoolishness#documentation',
       color1: "#9500ff",
+      color2: "#9500ff",
       blocks: [
         {
           opcode: 'get',
           blockType: Scratch.BlockType.REPORTER,
-          text: 'get [url]',
+          text: 'get [url] using [allorgins_get]',
           "arguments": {
             "url": {
               "type": Scratch.ArgumentType.STRING,
               "defaultValue": "https://reqbin.com/echo/get/json",
+            },
+            "allorgins_get": {
+              "type": Scratch.ArgumentType.STRING,
+              "defaultValue": "AllOrgins",
+              "menu": "allorgins_get",
             }
           }
         },  {
@@ -160,11 +166,17 @@ class turboFoolishness {
             }
           }
         },
-      ]
+      ],
+      "menus": {
+        "allorgins_get": {
+          acceptReporters: true,
+          items: [{text:"AllOrgins",value:"https://api.allorigins.win/raw?url="}, {text:"GET",value:""}],
+        }
+      }
     }
   }
 get(args) {
-    return fetch("https://api.allorigins.win/raw?url=" + args.url).then(response => response.text());
+    return fetch(args.allorgins_get + args.url).then(response => response.text());
   };
 get_old(args) {
     return fetch(args.url).then(response => response.text());
