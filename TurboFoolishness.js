@@ -10,8 +10,8 @@ class turboFoolishness {
       id: 'turbofoolishness',
       name: 'TurboFoolishness',
       docsURI: 'https://github.com/Mwalters75/TurboFoolishness#documentation',
-      color1: '#9500ff',
-      color2: '#9500ff',
+      color1: "#9500ff",
+      description: "The developer's companion",
       blocks: [
         {
           opcode: 'get',
