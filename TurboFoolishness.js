@@ -164,10 +164,7 @@ class turboFoolishness {
     }
   }
 get(args) {
-    return fetch(args.allorgins_get + args.url).then(response => response.text());
-  };
-get_old(args) {
-    return fetch(args.url).then(response => response.text());
+    return fetch(args.allorgins_get + args.url).then(response => response.text()).catch(err => '');
   };
 equaltotrue(args) {
   if (args.boolean == true) {
