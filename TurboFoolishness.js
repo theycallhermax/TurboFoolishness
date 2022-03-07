@@ -154,6 +154,16 @@ class turboFoolishness {
               "defaultValue": "Foobar"
             }
           }
+        },  '---', {
+          opcode: 'backwards_text',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'make [text] backwards',
+          "arguments": {
+            "text": {
+              "type": Scratch.ArgumentType.STRING,
+              "defaultValue": "foo",
+            }
+          }
         },
       ],
       "menus": {
@@ -235,6 +245,9 @@ stringtoboolean(args) {
   };
 strict_equality(args) {
   return (args.sentance === args.other_sentance);
+  };
+backwards_text(args) {
+  return args.text.split('').reverse().join('');
   };
 }
 Scratch.extensions.register(new turboFoolishness());
