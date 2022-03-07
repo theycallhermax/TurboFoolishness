@@ -9,7 +9,7 @@ class turboFoolishness {
     return {
       id: 'turbofoolishness',
       name: 'TurboFoolishness',
-      docsURI: 'https://github.com/Mwalters75/TurboFoolishness#documentation',
+      docsURI: 'https://scratch.mit.edu/discuss/post/5964143/',
       color1: "#9500ff",
       color2: "#9500ff",
       blocks: [
