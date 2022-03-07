@@ -204,6 +204,8 @@ ifthenelse(args) {
 ifthen(args) {
   if (args.if == true) {
     return args.text;
+  } else {
+    return '';
   }
   };
 parseJSON(args) {
