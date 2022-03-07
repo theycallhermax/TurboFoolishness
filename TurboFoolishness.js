@@ -164,6 +164,24 @@ class turboFoolishness {
               "defaultValue": "foo",
             }
           }
+        },  {
+          opcode: 'find_and_replace',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'replace [find] with [replace] in [text]',
+          "arguments": {
+            "find": {
+              "type": Scratch.ArgumentType.STRING,
+              "defaultValue": "foo",
+            },
+            "replace": {
+              "type": Scratch.ArgumentType.STRING,
+              "defaultValue": "bar",
+            },
+            "text": {
+              "type": Scratch.ArgumentType.STRING,
+              "defaultValue": "foobar",
+            }
+          }
         },
       ],
       "menus": {
@@ -250,6 +268,9 @@ strict_equality(args) {
   };
 backwards_text(args) {
   return args.text.split('').reverse().join('');
+  };
+find_and_replace(args) {
+  return args.text.replace(args.find, args.replace);
   };
 }
 Scratch.extensions.register(new turboFoolishness());
