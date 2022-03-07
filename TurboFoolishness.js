@@ -171,15 +171,15 @@ class turboFoolishness {
           "arguments": {
             "find": {
               "type": Scratch.ArgumentType.STRING,
-              "defaultValue": "foo",
+              "defaultValue": "Foo",
             },
             "replace": {
               "type": Scratch.ArgumentType.STRING,
-              "defaultValue": "bar",
+              "defaultValue": "Foobar",
             },
             "text": {
               "type": Scratch.ArgumentType.STRING,
-              "defaultValue": "foobar",
+              "defaultValue": "Foo is nice!",
             }
           }
         },
