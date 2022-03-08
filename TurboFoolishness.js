@@ -182,16 +182,6 @@ class turboFoolishness {
               "defaultValue": "Foo",
             }
           }
-        },  {
-          opcode: "trim",
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'trim [text]',
-          "arguments": {
-            "text": {
-              "type": Scratch.ArgumentType.STRING,
-              "defaultValue": "  foo  ",
-            }
-          }
         },
       ],
       "menus": {
@@ -281,9 +271,6 @@ backwards_text(args) {
   };
 find_and_replace(args) {
   return args.text.replace(args.find, args.replace);
-  };
-trim(args) {
-  return args.text.trim();
   };
 }
 Scratch.extensions.register(new turboFoolishness());
