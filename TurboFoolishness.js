@@ -179,7 +179,7 @@ class turboFoolishness {
             },
             "text": {
               "type": Scratch.ArgumentType.STRING,
-              "defaultValue": "Foo is nice!",
+              "defaultValue": "Foo",
             }
           }
         },
