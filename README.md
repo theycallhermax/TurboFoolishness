@@ -1,6 +1,4 @@
 # TurboFoolishness
-![CodeQL](https://github.com/Mwalters75/TurboFoolishness/actions/workflows/codeql-analysis.yml/badge.svg?branch=main)
-
 TurboFoolishness is a TurboWarp custom extension
 ## Supported Editors
 - [TurboWarp](https://turbowarp.org/editor?extension=https://mwalters75.github.io/TurboFoolishness/TurboFoolishness.js)
