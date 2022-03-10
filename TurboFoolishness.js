@@ -182,7 +182,17 @@ class turboFoolishness {
               "defaultValue": "Foo",
             }
           }
-        },
+        },  {
+          opcode: "trim",
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'trim [text]',
+          "arguments": {
+            "text": {
+              "type": Scratch.ArgumentType.STRING,
+              "defaultValue": "  foo  ",
+            }
+          }
+        }
       ],
       "menus": {
         "allorgins_get": {
