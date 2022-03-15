@@ -1,5 +1,5 @@
 class turboFoolishness {
-  varructor(runtime) {
+  constructor(runtime) {
     /**
      * @type {Runtime}
      */
