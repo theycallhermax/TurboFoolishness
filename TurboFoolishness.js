@@ -1,5 +1,5 @@
 class turboFoolishness {
-  constructor(runtime) {
+  varructor(runtime) {
     /**
      * @type {Runtime}
      */
@@ -208,8 +208,8 @@ equaltonothing(args) {
   return (args.boolean == '');
   };
 miliseconds() {
-  const date = new Date();
-  const miliseconds = date.getMilliseconds();
+  var date = new Date();
+  var miliseconds = date.getMilliseconds();
   return miliseconds;
   };
 ifthenelse(args) {
@@ -228,7 +228,7 @@ ifthen(args) {
   };
 parseJSON(args) {
   try {
-    const path = args.PATH.toString().split('/').map(prop => decodeURIComponent(prop));
+    var path = args.PATH.toString().split('/').map(prop => decodeURIComponent(prop));
     if (path[0] === '') path.splice(0, 1);
     if (path[path.length - 1] === '') path.splice(-1, 1);
     let json;
@@ -247,11 +247,11 @@ parseJSON(args) {
   }
   };
 js(args) {
-  const javascript = eval(args.js);
+  var javascript = eval(args.js);
   return javascript;
   };
 js_reporter(args) {
-  const javascript = eval(args.js);
+  var javascript = eval(args.js);
   return javascript;
   };
 true() {
