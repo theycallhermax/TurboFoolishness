@@ -1,5 +1,5 @@
 class turboFoolishness {
-  constructor(runtime) {
+constructor(runtime) {
     /**
      * @type {Runtime}
      */
@@ -195,11 +195,7 @@ get(args) {
     return fetch(args.allorgins_get + args.url).then(response => response.text()).catch(err => '');
   };
 equaltotrue(args) {
-  if (args.boolean == true) {
-    return true;
-  } else {
-    return false;
-  }
+  return (args.boolean == true);
   };
 equaltofalse(args) {
   return (!(args.boolean));
