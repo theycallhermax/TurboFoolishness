@@ -182,15 +182,7 @@ constructor(runtime) {
               "defaultValue": "Foo",
             }
           }
-        },	'---',	{
-		  	 opcode: 'pause',
-			 blockType: Scratch.BlockType.COMMAND,
-			 text: 'pause script',
-		  },	{
-		  	 opcode: 'play',
-			 blockType: Scratch.BlockType.COMMAND,
-			 text: 'resume script',
-		  },
+        },
       ],
       "menus": {
         "allorgins_get": {
@@ -275,15 +267,6 @@ backwards_text(args) {
   };
 find_and_replace(args) {
   return args.text.replace(args.find, args.replace);
-  };
-pause() {
-  var pause = true;
-  while(pause == true) {
-    return '';
-  }
-  };
-play() {
-  var pause = false;
   };
 }
 Scratch.extensions.register(new turboFoolishness());
