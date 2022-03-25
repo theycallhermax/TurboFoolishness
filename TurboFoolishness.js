@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 var pause = false;
+=======
+>>>>>>> parent of a986ae6 (Remove colours)
 class turboFoolishness {
 constructor(runtime) {
     /**
@@ -11,7 +14,12 @@ constructor(runtime) {
       id: 'turbofoolishness',
       name: 'TurboFoolishness',
       docsURI: 'https://scratch.mit.edu/discuss/post/5964143/',
+<<<<<<< HEAD
       color1: '#9500f',
+=======
+      color1: "#9500ff",
+      color2: "#9500ff",
+>>>>>>> parent of a986ae6 (Remove colours)
       blocks: [
         {
           opcode: 'get',
