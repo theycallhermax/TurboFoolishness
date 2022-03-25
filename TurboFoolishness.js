@@ -1,4 +1,3 @@
-var pause = false;
 class turboFoolishness {
 constructor(runtime) {
     /**
