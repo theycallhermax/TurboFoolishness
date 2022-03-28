@@ -185,7 +185,7 @@ constructor(runtime) {
       ],
       "menus": {
         "allorgins_get": {
-          items: [{text:"AllOrgins",value:"https://api.allorigins.win/raw?url="},{text:"GET",value:""}],
+          items: [{text:"AllOrgins",value:"https://api.allorigins.win/raw?url="},{text:"GET",value:""},{text:"GETAnywhere",value:"https://getanywhere.mwalters75.repl.co/?url="}],
         },
       }
     }
