@@ -181,10 +181,6 @@ constructor(runtime) {
               "defaultValue": "Foo",
             }
           }
-        },  {
-          opcode: 'new_line',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'new line',
         },
       ],
       "menus": {
@@ -270,9 +266,6 @@ backwards_text(args) {
   };
 find_and_replace(args) {
   return args.text.replace(args.find, args.replace);
-  };
-new_line() {
-  return '\n';
   };
 }
 Scratch.extensions.register(new turboFoolishness());
