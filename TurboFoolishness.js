@@ -57,6 +57,7 @@ constructor(runtime) {
           opcode: 'miliseconds',
           blockType: Scratch.BlockType.REPORTER,
           text: 'miliseconds',
+          disableMonitor: true,
         },  '---',  {
           opcode: 'ifthenelse',
           blockType: Scratch.BlockType.REPORTER,
