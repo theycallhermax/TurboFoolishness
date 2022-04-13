@@ -250,10 +250,10 @@ js_reporter(args) {
   return javascript;
   };
 true() {
-  return ('1' == '1');
+  return (true);
   };
 false() {
-  return ('1' == '2');
+  return (false);
   };
 stringtoboolean(args) {
   return args.string.toString().toLowerCase();
