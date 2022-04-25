@@ -112,7 +112,7 @@ constructor(runtime) {
           },
           "JSON_STRING": {
             "type":Scratch.ArgumentType.STRING,
-            "defaultValue":'{"foo":"foobar"}'
+            "defaultValue":'{ "foo": "foobar" }'
             }
           }
         },  '---',  {
