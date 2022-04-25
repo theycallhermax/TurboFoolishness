@@ -14,7 +14,7 @@ constructor(runtime) {
         {
           opcode: 'get',
           blockType: Scratch.BlockType.REPORTER,
-          text: 'get [url] using [allorgins_get]',
+          text: 'GET [url] using [allorgins_get]',
           "arguments": {
             "url": {
               "type": Scratch.ArgumentType.STRING,
@@ -23,6 +23,20 @@ constructor(runtime) {
             "allorgins_get": {
               "type": Scratch.ArgumentType.STRING,
               "menu": "allorgins_get",
+            }
+          }
+        },  {
+          opcode: 'post',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'POST [url] data [data]',
+          "arguments": {
+            "url": {
+              "type": Scratch.ArgumentType.STRING,
+              "defaultValue": "https://reqbin.com/echo/post/json",
+            },
+            "data": {
+              "type": Scratch.ArgumentType.STRING,
+              "defaultValue": '{"Id": 78912,"Customer": "Jason Sweet",}',
             }
           }
         },  '---',  {
@@ -191,7 +205,17 @@ constructor(runtime) {
     }
   }
 get(args) {
-    return fetch(args.allorgins_get + args.url).then(response => response.text()).catch(err => '');
+  return fetch(args.allorgins_get + args.url).then(response => response.text()).catch(err => '');
+  };
+post(args) {
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", args.url);
+  xhr.setRequestHeader("Accept", "application/json");
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.onload = () => { 
+    return xhr.responseText;
+  }
+  xhr.send(args.data);
   };
 equaltotrue(args) {
   return (args.boolean == true);
