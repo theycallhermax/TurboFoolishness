@@ -212,10 +212,10 @@ post(args) {
   xhr.open("POST", args.url);
   xhr.setRequestHeader("Accept", "application/json");
   xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.send(args.data);
   xhr.onload = () => { 
     return xhr.responseText;
   }
-  xhr.send(args.data);
   };
 equaltotrue(args) {
   return (args.boolean == true);
