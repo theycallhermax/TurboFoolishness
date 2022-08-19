@@ -150,7 +150,7 @@ class turboFoolishness {
               },
               "other_sentance": {
                 "type": Scratch.ArgumentType.STRING,
-                "defaultValue": "Foobar"
+                "defaultValue": "foo"
               }
             }
           },  '---', {
@@ -181,17 +181,7 @@ class turboFoolishness {
                 "defaultValue": "Foo",
               }
             }
-          }, '---', {
-            "opcode": 'convertEpochtoRelative',
-				    "blockType": Scratch.BlockType.REPORTER, 
-					  "text": 'epoch to relative time [epoch]',
-					  "arguments": {
-						  "epoch": {
-							  "type": Scratch.ArgumentType.NUMBER,
-							  "defaultValue": 0,
-						},
-					}
-				},
+          },
         ],
         "menus": {
           "allorgins_get": {
@@ -260,10 +250,10 @@ class turboFoolishness {
     return javascript;
     };
   true() {
-    return (true);
+    return true;
     };
   false() {
-    return (false);
+    return false;
     };
   stringtoboolean(args) {
     return args.string.toString().toLowerCase();
@@ -277,42 +267,5 @@ class turboFoolishness {
   find_and_replace(args) {
     return args.text.replace(args.find, args.replace);
     };
-  convertEpochtoRelative({epoch}) {
-		this.current_date = new Date();
-		this.current_epoch = this.current_date.getTime() / 1000;
-		this.difference = (this.current_epoch - epoch);
-		if (this.difference < 60) {
-			// Less than a minute has passed:
-			this.time_unit = 0;
-			this.difference = Math.round(this.difference);
-		} else if (this.difference < 3600) {
-			// Less than an hour has passed:
-			this.time_unit = 1;
-			this.difference =  Math.round(this.difference / 60);
-		} else if (this.difference < 86400) {
-			// Less than a day has passed:
-			this.time_unit = 2;
-			this.difference =  Math.round(this.difference / 3600);
-		} else if (this.difference < 2620800) {
-			// Less than a month has passed:
-			this.time_unit = 3;
-			this.difference =  Math.round(this.difference / 86400);
-		} else if (this.difference < 31449600) {
-			// Less than a year has passed:
-			this.time_unit = 4;
-			this.difference =  Math.round(this.difference / 2620800);
-		} else {
-			// More than a year has passed:
-			this.time_unit = 5;
-			this.difference =  Math.round(this.difference / 31449600);
-		}
-        if (this.difference <= 0) {
-            return "just now";
-        } else if (this.difference == 1) {
-			return ["a second ago", "a minute ago", "a hour ago", "a day ago", "a month ago", "a year ago"][this.time_unit];
-		} else {
-			return String(this.difference) + [" seconds ago", " minutes ago", " hours ago", " days ago", " months ago", " years ago"][this.time_unit];
-		}
-	};
   }
   Scratch.extensions.register(new turboFoolishness());
