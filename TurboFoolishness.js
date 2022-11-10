@@ -10,6 +10,7 @@ class turboFoolishness {
         id: 'turbofoolishness',
         name: 'TurboFoolishness',
         docsURI: 'https://scratch.mit.edu/discuss/post/5964143/',
+        color1: '#9500ff',
         blocks: [
           {
             opcode: 'get',
